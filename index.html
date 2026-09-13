@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Direito do Passageiro Aéreo | Indenização por Voo Atrasado, Cancelado e Bagagem</title>
+    <title>Direito do Passageiro Aéreo | Voo Direto+ | Defesa Especializada do Consumidor Aéreo</title>
     
     <!-- Meta Tags SEO -->
-    <meta name="description" content="Saiba se seu voo tem direito a indenização de até R$ 10.000 por atrasos, cancelamentos, overbooking ou extravio de bagagem. Análise gratuita sem custos iniciais.">
-    <meta name="keywords" content="direito do passageiro aereo, indenizacao voo atrasado, voo cancelado, overbooking, anac resolucao 400, mala extraviada, advogado direito aeronautico">
+    <meta name="description" content="Especialistas em Direito do Consumidor Aéreo. Atrasos, cancelamentos, preterição de embarque e problemas com bagagem podem gerar direitos ao passageiro. Análise inicial sem custo.">
+    <meta name="keywords" content="direito do passageiro aereo, direito do consumidor aereo, voo atrasado, voo cancelado, preterição de embarque, bagagem extraviada, advogado direito aeronautico, anac resolucao 400">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,190 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Folha de Estilos Personalizada com Cache Buster -->
-    <link rel="stylesheet" href="style.css?v=3.0">
+    <link rel="stylesheet" href="style.css?v=4.0">
+
+    <style>
+        /* === ESTILOS ADICIONAIS PARA AS ALTERAÇÕES v4.0 === */
+
+        /* Hero: Subtítulo dourado institucional */
+        .hero-title-line1 {
+            display: block;
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #FFFFFF;
+            line-height: 1.15;
+            margin-bottom: 4px;
+        }
+        .hero-title-line2 {
+            display: block;
+            font-size: clamp(1.6rem, 3.8vw, 2.6rem);
+            font-weight: 700;
+            color: #DA9727;
+            line-height: 1.25;
+            margin-bottom: 0;
+        }
+        .hero-secondary-value {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(218, 151, 39, 0.1);
+            border: 1px solid rgba(218, 151, 39, 0.3);
+            border-radius: 10px;
+            padding: 12px 20px;
+            margin-top: 18px;
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+            color: #DA9727;
+            font-weight: 600;
+        }
+        .hero-secondary-value i {
+            font-size: 1.1rem;
+        }
+        .hero-fee-notice {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 12px;
+            font-style: italic;
+        }
+
+        /* Disclaimer sob a seção de valores */
+        .values-legal-disclaimer {
+            max-width: 820px;
+            margin: 30px auto 0;
+            text-align: center;
+            font-size: 0.84rem;
+            color: #CBD5E1;
+            line-height: 1.7;
+            padding: 18px 28px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(218, 151, 39, 0.35);
+            border-radius: 12px;
+        }
+        .values-legal-disclaimer strong {
+            color: #DA9727;
+        }
+        .values-legal-disclaimer i {
+            color: #DA9727;
+        }
+
+        /* Checklist de documentação com destaque */
+        .doc-checklist {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .doc-checklist li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 16px;
+            margin-bottom: 8px;
+            background: #FFFBEB;
+            border-left: 4px solid #DA9727;
+            border-radius: 0 10px 10px 0;
+            font-size: 0.95rem;
+            color: #1E293B;
+            font-weight: 500;
+            line-height: 1.45;
+        }
+        .doc-checklist li i {
+            color: #DA9727;
+            font-size: 1rem;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        /* Rodapé sofisticado v4 */
+        .footer-v4-identity {
+            text-align: center;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .footer-v4-identity .footer-brand-name {
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        .footer-v4-identity .footer-brand-name .white-text { color: #FFFFFF; }
+        .footer-v4-identity .footer-brand-name .gold-text { color: #DA9727; }
+        .footer-v4-identity .footer-brand-name .plus-text { color: #DA9727; font-size: 1.4rem; }
+        .footer-v4-tagline {
+            font-size: 0.95rem;
+            color: #DA9727;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .footer-v4-desc {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.55);
+            max-width: 500px;
+            margin: 0 auto 20px;
+            line-height: 1.5;
+        }
+        .footer-v4-services {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px 24px;
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.5);
+            font-weight: 500;
+        }
+        .footer-v4-services span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .footer-v4-services span::before {
+            content: '•';
+            color: #DA9727;
+            font-weight: 900;
+        }
+        .footer-v4-services span:first-child::before {
+            content: '';
+        }
+        .footer-v4-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px 28px;
+            padding: 24px 0;
+            margin-bottom: 24px;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .footer-v4-nav a {
+            color: rgba(255,255,255,0.55);
+            font-size: 0.88rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .footer-v4-nav a:hover {
+            color: #DA9727;
+        }
+        .footer-v4-bottom {
+            text-align: center;
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.3);
+            line-height: 1.7;
+        }
+
+        /* Wrapper do footer novo — anula o grid container original */
+        .footer-v4-wrapper {
+            display: block !important;
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 48px 24px 0;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
@@ -47,52 +230,42 @@
             </div>
             <div class="top-bar-guarantees">
                 <span><i class="fas fa-shield-alt"></i> Atendimento 100% Online em Todo o Brasil</span>
-                <span><i class="fas fa-check-circle"></i> Cláusula Risco Zero: Só Paga se Ganhar</span>
+                <span><i class="fas fa-check-circle"></i> Análise Sem Custo · Pagamento Somente em Caso de Êxito</span>
             </div>
         </div>
     </aside>
 
     <!-- =========================================================================
-         HEADER AREJADO (NÃO JUNTINHO) COM ESPAÇO PREPARADO PARA A LOGO
+         HEADER
          ========================================================================= -->
     <header class="site-header">
         <div class="nav-container">
 
-            <!-- =================================================================
-                 ESPAÇO DA LOGOMARCA:
-                 Basta colar o link da imagem da sua logo no atributo src="..." abaixo!
-                 Exemplo: src="https://sua-logo.png" ou src="logo.png"
-                 Se ainda não colocou ou o link falhar, exibirá automaticamente
-                 o selo visual de alto luxo preparado.
-                 ================================================================= -->
             <a href="#hero" class="brand-logo-anchor" title="Página Inicial">
-                <!-- Imagem da Logo Oficial com borda de 50% -->
                 <img src="logo.png.jpeg" alt="Logo" class="site-custom-logo" style="width: 46px !important; height: 46px !important; border-radius: 50% !important; object-fit: cover !important; border: 2px solid #DA9727 !important; display: none;" onload="this.style.display='block'; var fb = document.getElementById('logoFallbackIcon'); if(fb) fb.style.display='none';" onerror="this.style.display='none'; var fb = document.getElementById('logoFallbackIcon'); if(fb) fb.style.display='flex';">
                 
-                <!-- Ícone reserva caso ainda não tenha colado o link da imagem -->
                 <div class="logo-emblem" id="logoFallbackIcon">
                     <i class="fas fa-plane-departure"></i>
                 </div>
 
-                <!-- Nome Oficial SEMPRE VISÍVEL no Celular e no Desktop -->
                 <div class="brand-text-block">
                     <div class="brand-main-title">
                         <span class="white-text">VOO</span>
-                        <span class="gold-text">Direto</span>
+                        <span class="gold-text">Direto<sup style="font-size:0.6em;">+</sup></span>
                     </div>
-                    <span class="brand-sub-badge">Defesa do Passageiro</span>
+                    <span class="brand-sub-badge">Direito do Consumidor Aéreo</span>
                 </div>
             </a>
 
-            <!-- Menu de Navegação Espaçoso e Elegante -->
+            <!-- Menu de Navegação -->
             <nav>
                 <ul class="nav-links-menu" id="navMenu">
                     <li><a href="#simulador"><i class="fas fa-calculator"></i> Simulador</a></li>
                     <li><a href="#orientacoes"><i class="fas fa-bullhorn"></i> No Aeroporto</a></li>
                     <li><a href="#especialista"><i class="fas fa-user-shield"></i> Especialista</a></li>
-                    <li><a href="#depoimentos"><i class="fas fa-star"></i> Depoimentos</a></li>
-                    <li><a href="#valores"><i class="fas fa-coins"></i> Quanto Receber</a></li>
+                    <li><a href="#valores"><i class="fas fa-coins"></i> Valores</a></li>
                     <li><a href="#como-funciona"><i class="fas fa-tasks"></i> Como Funciona</a></li>
+                    <li><a href="#casos"><i class="fas fa-briefcase"></i> Situações</a></li>
                     <li><a href="#faq"><i class="fas fa-question-circle"></i> Dúvidas</a></li>
                 </ul>
             </nav>
@@ -100,7 +273,7 @@
             <!-- Ação de Destaque -->
             <div class="nav-actions">
                 <a href="#simulador" class="btn-header-cta">
-                    <i class="fas fa-bolt"></i> Simular Indenização
+                    <i class="fas fa-bolt"></i> Analisar Meu Caso
                 </a>
             </div>
 
@@ -114,47 +287,57 @@
 
     <main>
         <!-- =========================================================================
-             HERO SECTION DE ALTO IMPACTO
+             HERO SECTION — VERSÃO INSTITUCIONAL
              ========================================================================= -->
         <section class="hero-section" id="hero">
             <div class="hero-container">
                 
                 <div class="hero-text-column">
                     <div class="hero-badge-kicker">
-                        <i class="fas fa-plane-slash"></i>
-                        <span>Voo Atrasado, Cancelado ou Mala Extraviada?</span>
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Especialistas em Direito do Consumidor Aéreo</span>
                     </div>
                     
                     <h1 class="hero-title">
-                        Receba até <span class="highlight-gold">R$ 10.000,00</span> de Indenização por Problemas com Seu Voo
+                        <span class="hero-title-line1">Seu Voo Deu Problema?</span>
+                        <span class="hero-title-line2">Vá direto aos seus direitos.</span>
                     </h1>
                     
                     <p class="hero-description">
-                        A legislação brasileira e a ANAC protegem o passageiro. Descubra gratuitamente em menos de 1 minuto se o seu voo é elegível a uma compensação financeira por danos morais e materiais, com <strong>Risco Zero</strong>.
+                        Atrasos, cancelamentos, preterição de embarque, bagagem e outros problemas podem gerar direitos ao passageiro. A legislação brasileira e a ANAC protegem você.
                     </p>
 
                     <div class="hero-cta-group">
                         <a href="#simulador" class="btn-primary-gold">
-                            <i class="fas fa-calculator"></i> Simular Meu Caso Gratuitamente
+                            <i class="fas fa-search"></i> ANALISAR MEU CASO
                         </a>
                         <a href="#orientacoes" class="btn-secondary-outline">
                             <i class="fas fa-exclamation-triangle"></i> Estou no Aeroporto Agora
                         </a>
                     </div>
 
+                    <p class="hero-fee-notice">
+                        Análise inicial sem custo. Pagamento somente em caso de êxito.
+                    </p>
+
+                    <div class="hero-secondary-value">
+                        <i class="fas fa-info-circle"></i>
+                        Indenizações que podem chegar a R$ 10.000, conforme o caso.
+                    </div>
+
                     <!-- Indicadores de Confiança -->
                     <div class="hero-stats-strip">
                         <div class="stat-item">
                             <h3>R$ 0,00</h3>
-                            <p>Custo Inicial (Só Paga se Ganhar)</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>+3 Milhões</h3>
-                            <p>Passageiros com Direitos Assegurados</p>
+                            <p>Custo Inicial para Análise</p>
                         </div>
                         <div class="stat-item">
                             <h3>100% Online</h3>
                             <p>Sem Audiências ou Burocracia</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Só Paga se Ganhar</h3>
+                            <p>Pagamento Somente no Êxito</p>
                         </div>
                     </div>
                 </div>
@@ -187,19 +370,19 @@
                                 </div>
                             </div>
                             <div class="ticket-detail-row">
-                                <span>Indenização Estimada:</span>
-                                <span>R$ 8.000 a R$ 10.000</span>
+                                <span>Situação:</span>
+                                <span>Possível direito a indenização</span>
                             </div>
                             <div class="ticket-detail-row">
-                                <span>Assistência de Balcão:</span>
-                                <span>Alimentação + Hotel + Táxi</span>
+                                <span>Assistência obrigatória:</span>
+                                <span>Alimentação + Hotel + Transporte</span>
                             </div>
                         </div>
 
                         <ul class="hero-box-benefit-list">
-                            <li><i class="fas fa-check-circle"></i> Voo remarcado com mais de 4h gera Dano Moral</li>
-                            <li><i class="fas fa-check-circle"></i> Overbooking garante PIX de até R$ 3.600 na hora</li>
-                            <li><i class="fas fa-check-circle"></i> Mala extraviada garante reembolso de compras</li>
+                            <li><i class="fas fa-check-circle"></i> Atraso superior a 4h pode gerar direito a indenização</li>
+                            <li><i class="fas fa-check-circle"></i> Preterição de embarque gera compensação financeira imediata</li>
+                            <li><i class="fas fa-check-circle"></i> Extravio de bagagem pode gerar ressarcimento e indenização</li>
                         </ul>
                     </div>
                 </div>
@@ -208,19 +391,14 @@
         </section>
 
         <!-- =========================================================================
-             ESPAÇO DEDICADO PARA A FOTO QUE O CLIENTE MANDOU
-             ========================================================================= -->
-        
-
-        <!-- =========================================================================
-             SEÇÃO 1: SIMULADOR DE INDENIZAÇÃO (AIRHELP STYLE)
+             SEÇÃO 1: SIMULADOR DE INDENIZAÇÃO
              ========================================================================= -->
         <section class="calculator-section" id="simulador">
             <div class="calc-container">
                 <div class="calc-header">
-                    <span class="calc-kicker">Simulador Gratuito de Indenização</span>
-                    <h2>Calcule se Seu Voo Tem Direito a Indenização</h2>
-                    <p>Descubra em menos de 1 minuto quanto você pode receber por transtornos em seu voo.</p>
+                    <span class="calc-kicker">Análise Gratuita</span>
+                    <h2>Descubra se Você Pode Ter Direito a uma Indenização</h2>
+                    <p>Preencha os dados do seu voo em menos de 1 minuto e saiba se a sua situação pode gerar direitos.</p>
                 </div>
 
                 <div class="calc-card">
@@ -332,8 +510,8 @@
 
                         <!-- AVISO DE BAGAGEM EXTRAVIADA -->
                         <div class="baggage-callout" id="baggage-notice">
-                            <i class="fas fa-check-circle" style="color: #2563EB;"></i> <strong>Extravio de Bagagem Gera Direito à Indenização!</strong><br>
-                            Para extravio ou danos à bagagem não é necessário calcular horas de atraso do voo: você já tem direito à assistência, ressarcimento de compras de emergência e indenização.
+                            <i class="fas fa-check-circle" style="color: #2563EB;"></i> <strong>Problemas com bagagem podem gerar direito a indenização.</strong><br>
+                            Para extravio ou danos à bagagem não é necessário calcular horas de atraso do voo: o passageiro pode ter direito à assistência, ressarcimento de compras de emergência e indenização.
                         </div>
 
                         <!-- PERGUNTAS DE ATRASO (OCULTAS AO CLICAR EM BAGAGEM) -->
@@ -381,27 +559,24 @@
                 </div>
             </div>
         </section>
-<section class="lawyer-profile-section" id="especialista">
+
+        <!-- =========================================================================
+             SEÇÃO: ESPECIALISTA / DEFESA ESPECIALIZADA
+             ========================================================================= -->
+        <section class="lawyer-profile-section" id="especialista">
             <div class="profile-container">
                 
                 <!-- Coluna da Foto com Moldura Nobre -->
                 <div class="profile-photo-column">
                     <div class="profile-photo-frame">
-                        <!-- =========================================================
-                             ESPAÇO DA FOTO ENVIADA:
-                             Substitua o link em src="..." abaixo pela foto que ele mandou!
-                             Exemplo: src="https://seusite.com.br/foto.jpg" ou src="foto.jpg"
-                             ========================================================= -->
                         <img src="sobre.jpg.jpeg" alt="Foto do Especialista em Direito Aéreo" class="client-profile-photo" onerror="this.style.display='none'; document.getElementById('profilePhotoPlaceholder').style.display='flex';">
-                        
-                      
 
                         <!-- Selo de Autoridade Flutuante -->
                         <div class="profile-floating-badge">
                             <i class="fas fa-shield-alt"></i>
                             <div>
-                                <strong>Assessoria Jurídica de Alto Nível</strong>
-                                <span>Defesa Especializada do Passageiro</span>
+                                <strong>Assessoria Jurídica Especializada</strong>
+                                <span>Direito do Consumidor Aéreo</span>
                             </div>
                         </div>
                     </div>
@@ -410,9 +585,9 @@
                 <!-- Coluna de Texto & Autoridade -->
                 <div class="profile-text-column">
                     <span class="section-kicker">Atendimento Direto & Humanizado</span>
-                    <h2>Defesa Intransigente dos Seus Direitos Contra os Abusos das Companhias Aéreas</h2>
+                    <h2>Defesa especializada dos seus direitos contra as companhias aéreas</h2>
                     <p>
-                        As companhias aéreas cancelam e atrasam voos diariamente, lucram bilhões e muitas vezes deixam os passageiros sem assistência adequada. Nossa missão é restabelecer a dignidade de quem viaja, buscando as reparações financeiras mais justas e integrais pela via extrajudicial ou judicial.
+                        Atuamos na defesa dos passageiros em casos de atraso, cancelamento, preterição de embarque, bagagem, reembolso e demais falhas na prestação do serviço aéreo. Nossa missão é restabelecer a dignidade de quem viaja, buscando as reparações mais justas pela via extrajudicial ou judicial.
                     </p>
 
                     <div class="profile-pillars-grid">
@@ -423,18 +598,18 @@
                         </div>
                         <div class="pillar-item">
                             <i class="fas fa-hand-holding-usd"></i>
-                            <strong>Honorários no Êxito (Risco Zero)</strong>
-                            <span>Você só paga se a indenização for depositada na sua conta bancária.</span>
+                            <strong>Pagamento Somente no Êxito</strong>
+                            <span>Você só paga se houver resultado efetivo no seu caso.</span>
                         </div>
                         <div class="pillar-item">
                             <i class="fas fa-laptop-house"></i>
                             <strong>Atuação 100% Digital</strong>
-                            <span>Você envia as fotos dos bilhetes pelo WhatsApp sem sair de casa.</span>
+                            <span>Você envia os documentos pelo WhatsApp sem sair de casa.</span>
                         </div>
                         <div class="pillar-item">
                             <i class="fas fa-gavel"></i>
                             <strong>Rigor Técnico Aeronáutico</strong>
-                            <span>Domínio profundo da Resolução 400 ANAC e Código de Defesa do Consumidor.</span>
+                            <span>Domínio da Resolução 400 da ANAC e do Código de Defesa do Consumidor.</span>
                         </div>
                     </div>
 
@@ -445,6 +620,7 @@
 
             </div>
         </section>
+
         <!-- =========================================================================
              SEÇÃO 2: GUIA E ORIENTAÇÕES AO PASSAGEIRO NO AEROPORTO
              ========================================================================= -->
@@ -454,6 +630,23 @@
                     <span class="orientacoes-kicker">Guia Prático de Balcão</span>
                     <h2>O Que Fazer no Aeroporto Agora?</h2>
                     <p>Seu voo atrasou, foi cancelado, você foi impedido de embarcar ou sua mala não chegou? Selecione a sua situação abaixo e veja o que exigir no balcão da companhia aérea imediatamente:</p>
+                </div>
+
+                <!-- CHECKLIST DE DOCUMENTAÇÃO EM DESTAQUE -->
+                <div style="max-width: 860px; margin: 0 auto 35px; background: #FFFFFF; border: 2px solid #DA9727; border-radius: 16px; padding: 28px 24px; box-shadow: 0 8px 24px rgba(218, 151, 39, 0.12);">
+                    <h3 style="font-size: 1.15rem; color: #021736; font-weight: 800; margin-bottom: 6px; text-align: center;">
+                        <i class="fas fa-camera" style="color: #DA9727; margin-right: 8px;"></i>
+                        Documentação Essencial — Guarde Tudo!
+                    </h3>
+                    <p style="text-align: center; font-size: 0.88rem; color: #64748B; margin-bottom: 16px;">Quem registra, prova. Reúna essas provas antes de qualquer coisa:</p>
+                    <ul class="doc-checklist">
+                        <li><i class="fas fa-check-circle"></i> <strong>Cartão de embarque</strong> — guarde o físico e/ou o digital (print ou foto)</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Painel de voos</strong> — fotografe o painel mostrando o atraso ou cancelamento</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Comprovantes de despesas</strong> — notas fiscais de alimentação, transporte, hospedagem, remédios</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Protocolos de atendimento</strong> — anote ou fotografe todos os números de protocolo fornecidos</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Mensagens e e-mails da companhia</strong> — salve prints de SMS, e-mails e notificações do app</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Despesas extras documentadas</strong> — se precisou comprar roupas, itens de higiene ou outros, guarde os recibos</li>
+                    </ul>
                 </div>
 
                 <style>
@@ -607,7 +800,7 @@
                 }
                 </style>
 
-                <!-- SELETOR VISUAL INTERATIVO DE CASOS (CARDS MODERNOS DE ALTO IMPACTO) -->
+                <!-- SELETOR VISUAL INTERATIVO DE CASOS -->
                 <div class="scenario-selector-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 35px;">
                     
                     <!-- CASO 1: ATRASO / CANCELAMENTO -->
@@ -631,7 +824,7 @@
                             <div class="scenario-icon" style="width: 48px; height: 48px; border-radius: 14px; background: #F8FAFC; border: 1.5px solid #E2E8F0; color: #021736; display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
                                 <i class="fas fa-ban"></i>
                             </div>
-                            <span class="scenario-badge gold" style="font-size: 0.74rem; font-weight: 800; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; background: #FEF3C7; color: #92400E; border: 1px solid #FCD34D;">PIX até R$ 1.800</span>
+                            <span class="scenario-badge gold" style="font-size: 0.74rem; font-weight: 800; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; background: #FEF3C7; color: #92400E; border: 1px solid #FCD34D;">Compensação Imediata</span>
                         </div>
                         <h3 style="font-size: 1.18rem; color: #021736; font-weight: 800; margin-bottom: 8px; line-height: 1.3;">Overbooking (Preterição)</h3>
                         <p style="font-size: 0.88rem; color: #64748B; line-height: 1.45; margin-bottom: 18px;">Voo superlotado e você foi impedido de embarcar involuntariamente.</p>
@@ -666,7 +859,7 @@
                         <div class="balcao-speech-wrap">
                             <span class="speech-tag"><i class="fas fa-bullhorn"></i> O Que Falar no Balcão de Atendimento:</span>
                             <div class="speech-bubble">
-                                “SOLICITO MINHA DECLARAÇÃO DE CONTINGÊNCIA E QUERO MEU VOUCHER DE ALIMENTAÇÃO, HOSPEDAGEM E TRANSPORTE.”
+                                "SOLICITO MINHA DECLARAÇÃO DE CONTINGÊNCIA E QUERO MEU VOUCHER DE ALIMENTAÇÃO, HOSPEDAGEM E TRANSPORTE."
                             </div>
                             <p class="calm-notice">💡 Respire fundo: quem vai te atender não é o culpado — seu direito é com a companhia, não com o funcionário.</p>
                         </div>
@@ -680,6 +873,8 @@
                             <li>Fotografe as filas no balcão e faça pequenos vídeos mostrando o tumulto e a falta de assistência.</li>
                             <li>Guarde e fotografe TODAS as notas fiscais de gastos com alimentação, transporte, água e remédios.</li>
                             <li>Tire foto da hora exata do embarque e do avião decolando com o relógio ou celular indicando o horário real.</li>
+                            <li>Salve todas as mensagens, SMS e e-mails enviados pela companhia aérea.</li>
+                            <li>Anote e fotografe todos os números de protocolo de atendimento.</li>
                         </ul>
                     </div>
 
@@ -691,12 +886,12 @@
                             <div class="copy-box-header">
                                 <strong>Exemplo do teor da Declaração de Contingência:</strong>
                             </div>
-                            <blockquote>“A [Companhia Aérea] declara para os devidos fins que o voo [Número], com rota [Origem] para [Destino], com partida originalmente programada para [Data e Hora], sofreu atraso/cancelamento por motivos operacionais/técnicos, decolando às [Novo Horário]. Atendimento registrado sob protocolo [Número].”</blockquote>
+                            <blockquote>"A [Companhia Aérea] declara para os devidos fins que o voo [Número], com rota [Origem] para [Destino], com partida originalmente programada para [Data e Hora], sofreu atraso/cancelamento por motivos operacionais/técnicos, decolando às [Novo Horário]. Atendimento registrado sob protocolo [Número]."</blockquote>
                         </div>
                     </div>
 
                     <div class="orientacao-step">
-                        <h3><span class="step-badge">3</span> COMPROVAÇÃO DE PERDA DE COMPROMISSO (AUMENTE SEU DANO MORAL)</h3>
+                        <h3><span class="step-badge">3</span> COMPROVAÇÃO DE PERDA DE COMPROMISSO (PODE AUMENTAR O DANO MORAL)</h3>
                         <p>Se o atraso fez você perder reuniões, diárias de hotel, passeios pagos ou consultas, comprove isso imediatamente. Ainda no aeroporto, envie um e-mail formal desmarcando o compromisso:</p>
 
                         <div class="copy-box">
@@ -761,7 +956,7 @@ Atenciosamente,
                         <i class="fas fa-exclamation-triangle"></i>
                         <div>
                             <h4>ATENÇÃO: NÃO ASSINE NADA COM "QUITAÇÃO TOTAL"!</h4>
-                            <p>Cuidado com formulários ou recibos oferecidos pela companhia aérea que contenham termos como "quitação ampla, geral e irrestrita". Receber o lanche, a hospedagem ou mesmo a remarcação de voo <strong>NÃO impede você de buscar indenização de até R$ 10.000 na Justiça pelos transtornos</strong>. Só assine recibos de recebimento do voucher simples — ou chame nossa assessoria jurídica antes de assinar.</p>
+                            <p>Cuidado com formulários ou recibos oferecidos pela companhia aérea que contenham termos como "quitação ampla, geral e irrestrita". Receber o lanche, a hospedagem ou mesmo a remarcação de voo <strong>não impede, por si só, a busca por eventuais indenizações</strong>. Só assine recibos de recebimento do voucher simples — ou chame nossa assessoria jurídica antes de assinar.</p>
                         </div>
                     </div>
 
@@ -785,15 +980,15 @@ Atenciosamente,
                         <div class="balcao-speech-wrap">
                             <span class="speech-tag"><i class="fas fa-bullhorn"></i> O Que Falar no Balcão de Atendimento:</span>
                             <div class="speech-bubble">
-                                “SOLICITO MINHA DECLARAÇÃO DE PRETERIÇÃO E QUERO MEUS R$ 1.800 NO PIX AGORA, PREVISTOS NA RESOLUÇÃO DA ANAC, ALÉM DE ALIMENTAÇÃO, HOSPEDAGEM E TRANSPORTE.”
+                                "SOLICITO MINHA DECLARAÇÃO DE PRETERIÇÃO E A COMPENSAÇÃO FINANCEIRA IMEDIATA PREVISTA NA RESOLUÇÃO DA ANAC, ALÉM DE ALIMENTAÇÃO, HOSPEDAGEM E TRANSPORTE."
                             </div>
-                            <p class="calm-notice">💡 Voo lotou? NÃO ACEITE VOUCHER DE 300 REAIS. A lei manda pagar em dinheiro na hora!</p>
+                            <p class="calm-notice">💡 Voo lotou? A lei prevê compensação financeira imediata. Não aceite valores abaixo do previsto na norma.</p>
                         </div>
                     </div>
 
                     <div class="orientacao-step">
                         <h3><span class="step-badge">1</span> O QUE É A COMPENSAÇÃO FINANCEIRA IMEDIATA (ART. 24 DA ANAC)</h3>
-                        <p>Quando a companhia vende mais passagens do que a capacidade do avião (overbooking) e te impede de embarcar involuntariamente, ela <strong>TEM QUE PAGAR COMPENSAÇÃO FINANCEIRA IMEDIATA NO BALCÃO</strong>:</p>
+                        <p>Quando a companhia vende mais passagens do que a capacidade do avião (overbooking) e te impede de embarcar involuntariamente, ela <strong>deve efetuar o pagamento de compensação financeira imediata no balcão</strong>:</p>
 
                         <div class="copy-box">
                             <div class="copy-box-header">
@@ -805,7 +1000,7 @@ Atenciosamente,
                         </div>
 
                         <div class="pix-compensation-box">
-                            <h4><i class="fas fa-money-bill-wave"></i> Quanto Você Tem Direito a Receber NA HORA no Balcão:</h4>
+                            <h4><i class="fas fa-money-bill-wave"></i> Valores previstos na norma para compensação imediata:</h4>
                             <div class="pix-grid">
                                 <div class="pix-card">
                                     <strong>Voo Nacional (Doméstico)</strong>
@@ -833,25 +1028,25 @@ Atenciosamente,
                         <h3><span class="step-badge">2</span> EXIJA A DECLARAÇÃO DE PRETERIÇÃO DE EMBARQUE</h3>
                         <p>Peça a declaração formal da companhia comprovando que você compareceu no horário e foi impedido de embarcar por falta de assentos. Confira se o documento possui o seguinte teor:</p>
                         <div class="copy-box">
-                            <blockquote>“A [Companhia Aérea], inscrita no CNPJ sob o nº [CNPJ], declara que o passageiro [Seu Nome Completo], titular do bilhete [Número], foi impedido de embarcar no voo [Número], rota [Origem]–[Destino], programado para [Data/Hora], por preterição de embarque involuntária (overbooking). Protocolo: [Número].”</blockquote>
+                            <blockquote>"A [Companhia Aérea], inscrita no CNPJ sob o nº [CNPJ], declara que o passageiro [Seu Nome Completo], titular do bilhete [Número], foi impedido de embarcar no voo [Número], rota [Origem]–[Destino], programado para [Data/Hora], por preterição de embarque involuntária (overbooking). Protocolo: [Número]."</blockquote>
                         </div>
                     </div>
 
                     <div class="orientacao-step">
                         <h3><span class="step-badge">3</span> E SE A COMPANHIA PEDIR VOLUNTÁRIOS?</h3>
-                        <p>A companhia é obrigada a procurar passageiros voluntários antes de barrar alguém. <strong>Cuidado:</strong> se você aceitar voluntariamente qualquer voucher pequeno de R$ 300 ou R$ 500, você abre mão do direito automático aos R$ 1.800 imediatos do art. 24. Só aceite se a companhia oferecer valores muito superiores e com hotel e próximo voo garantidos por escrito.</p>
+                        <p>A companhia é obrigada a procurar passageiros voluntários antes de barrar alguém. <strong>Cuidado:</strong> se você aceitar voluntariamente qualquer voucher pequeno, você pode abrir mão do direito automático à compensação imediata prevista no art. 24. Avalie com cautela antes de aceitar.</p>
                     </div>
 
                     <div class="orientacao-step">
-                        <h3><span class="step-badge">4</span> RECEBER O DINHEIRO NO BALCÃO NÃO ANULA SEU DANO MORAL NA JUSTIÇA</h3>
-                        <p>O pagamento de R$ 1.800 ou R$ 3.600 no balcão é uma penalidade administrativa obrigatória da ANAC. <strong>Você ainda pode entrar com ação judicial para buscar indenização por Danos Morais e Prejuízos Materiais adicionais</strong> pelo estresse, perda de compromissos e diárias de viagem!</p>
+                        <h3><span class="step-badge">4</span> A COMPENSAÇÃO NO BALCÃO NÃO EXCLUI OUTROS DIREITOS</h3>
+                        <p>O pagamento da compensação imediata no balcão é uma obrigação administrativa prevista na Resolução da ANAC. <strong>Isso não exclui, por si só, a possibilidade de buscar eventuais indenizações por Danos Morais e Prejuízos Materiais</strong>, que dependem da análise das circunstâncias de cada caso.</p>
                     </div>
 
                     <div class="alert-warning-box">
                         <i class="fas fa-exclamation-triangle"></i>
                         <div>
-                            <h4>ATENÇÃO AO RECIBO DO PIX: NÃO ASSINE QUITAÇÃO GERAL!</h4>
-                            <p>Ao receber o PIX da compensação imediata, o recibo deve mencionar EXCLUSIVAMENTE a quitação da compensação do Art. 24 da Resolução 400. Jamais assine termos que digam que você "renuncia a ações judiciais futuras".</p>
+                            <h4>ATENÇÃO AO RECIBO: NÃO ASSINE QUITAÇÃO GERAL!</h4>
+                            <p>Ao receber a compensação imediata, o recibo deve mencionar EXCLUSIVAMENTE a quitação da compensação do Art. 24 da Resolução 400. Não assine termos que digam que você "renuncia a ações judiciais futuras".</p>
                         </div>
                     </div>
 
@@ -875,7 +1070,7 @@ Atenciosamente,
                         <div class="balcao-speech-wrap">
                             <span class="speech-tag"><i class="fas fa-bullhorn"></i> O Que Falar no Balcão de Bagagens:</span>
                             <div class="speech-bubble">
-                                “SOLICITO O RIB (RELATÓRIO DE IRREGULARIDADE DE BAGAGEM) ONDE VOU CONSTAR TODOS OS ITENS DA BAGAGEM EXTRAVIADA.”
+                                "SOLICITO O RIB (RELATÓRIO DE IRREGULARIDADE DE BAGAGEM) ONDE VOU CONSTAR TODOS OS ITENS DA BAGAGEM EXTRAVIADA."
                             </div>
                             <p class="calm-notice">💡 Sua mala não apareceu na esteira? NÃO ACEITE "vai aparecer amanhã" sem o papel assinado!</p>
                         </div>
@@ -883,7 +1078,7 @@ Atenciosamente,
 
                     <div class="orientacao-step">
                         <h3><span class="step-badge">1</span> PEÇA O RIB (RELATÓRIO DE IRREGULARIDADE DE BAGAGEM) NA HORA!</h3>
-                        <p>O <strong>RIB</strong> (chamado internacionalmente de PIR - <em>Property Irregularity Report</em>) é a prova rainha do extravio. Sem ele, a companhia aérea alega que você retirou sua mala normalmente. Não saia da sala de desembarque sem a sua via do RIB carimbada e assinada pelo funcionário.</p>
+                        <p>O <strong>RIB</strong> (chamado internacionalmente de PIR - <em>Property Irregularity Report</em>) é a prova rainha do extravio. Sem ele, a companhia aérea pode alegar que você retirou sua mala normalmente. Não saia da sala de desembarque sem a sua via do RIB carimbada e assinada pelo funcionário.</p>
                         
                         <div class="copy-box">
                             <div class="copy-box-header">
@@ -897,7 +1092,7 @@ Atenciosamente,
 
                     <div class="orientacao-step">
                         <h3><span class="step-badge">2</span> RESSARCIMENTO DE GASTOS DE EMERGÊNCIA (ART. 33 DA ANAC)</h3>
-                        <p>Enquanto você estiver sem sua mala fora do seu domicílio, a companhia aérea é <strong>obrigada a pagar despesas emergenciais</strong> de roupas, produtos de higiene pessoal e medicamentos necessários:</p>
+                        <p>Enquanto você estiver sem sua mala fora do seu domicílio, a companhia aérea é <strong>obrigada a custear despesas emergenciais</strong> de roupas, produtos de higiene pessoal e medicamentos necessários:</p>
                         <ul>
                             <li>Compre itens essenciais para passar os dias e <strong>guarde rigorosamente todas as notas fiscais</strong> (tire fotos imediatas dos comprovantes).</li>
                             <li>O ressarcimento deve ser realizado pela companhia em até 7 dias após a apresentação dos comprovantes.</li>
@@ -909,7 +1104,7 @@ Atenciosamente,
                         <ul>
                             <li><strong>Voo Nacional:</strong> A empresa aérea tem até <strong>7 dias</strong> para localizar e entregar sua mala em seu endereço.</li>
                             <li><strong>Voo Internacional:</strong> O prazo é de até <strong>21 dias</strong>.</li>
-                            <li><strong>Se ultrapassar o prazo:</strong> É considerado extravio definitivo, gerando dever de indenização integral dos pertences + Danos Morais na Justiça.</li>
+                            <li><strong>Se ultrapassar o prazo:</strong> É considerado extravio definitivo, podendo gerar dever de indenização integral dos pertences e eventual Dano Moral.</li>
                             <li><strong>Mala Danificada ou Violada:</strong> Faça o protesto no balcão em até <strong>7 dias</strong> após o recebimento.</li>
                         </ul>
 
@@ -926,7 +1121,7 @@ Atenciosamente,
                         <i class="fas fa-exclamation-triangle"></i>
                         <div>
                             <h4>CUIDADO AO RECEBER A MALA ATRASADA: NÃO DÊ QUITAÇÃO TOTAL!</h4>
-                            <p>Quando a mala for entregue na sua casa ou hotel dias depois, verifique se está rasgada, com o cadeado violado ou se faltam objetos. Ao assinar o comprovante de entrega, escreva ao lado da sua assinatura: <em>"Recebido com atraso de X dias, sob reserva de conferência dos pertences internos"</em>. Ficar dias sem suas roupas gera dano moral garantido!</p>
+                            <p>Quando a mala for entregue na sua casa ou hotel dias depois, verifique se está rasgada, com o cadeado violado ou se faltam objetos. Ao assinar o comprovante de entrega, escreva ao lado da sua assinatura: <em>"Recebido com atraso de X dias, sob reserva de conferência dos pertences internos"</em>.</p>
                         </div>
                     </div>
 
@@ -945,154 +1140,19 @@ Atenciosamente,
         </section>
 
         <!-- =========================================================================
-             SEÇÃO 3: DEPOIMENTOS EM CARROSSEL (PROVA SOCIAL DE 3 MILHÕES)
+             SEÇÃO DE DEPOIMENTOS REMOVIDA (dados não verificados)
              ========================================================================= -->
-        <section class="testimonials-section" id="depoimentos">
-            <div class="testimonials-container">
-                
-                <div class="testimonials-monumental-header">
-                    <span class="testimonials-badge">
-                        <i class="fas fa-award"></i> Excelência Comprovada em Todo o Brasil
-                    </span>
-                    <h2 class="testimonials-huge-headline">
-                        Mais de <span class="gold-emphasis">3 Milhões de Passageiros</span> Já Tiveram Seus Direitos Assegurados e Receberam Indenização
-                    </h2>
-                    <p class="testimonials-subtext">
-                        Conheça relatos de quem não aceitou o prejuízo das companhias aéreas e recuperou seu dinheiro com nossa assistência jurídica especializada. Arraste para o lado para navegar:
-                    </p>
-                </div>
-
-                <!-- Carrossel Arrastável (Drag / Swipe / Touch) -->
-                <div class="carousel-viewport" id="carouselViewport">
-                    <div class="carousel-track" id="testimonialsTrack">
-                        
-                        <!-- Depoimento 1 -->
-                        <div class="testimonial-card">
-                            <div>
-                                <div class="card-stars">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </div>
-                                <span class="card-amount-tag"><i class="fas fa-check"></i> R$ 8.500,00 Recebidos</span>
-                                <p class="card-quote">
-                                    "Meu voo para Lisboa foi cancelado sem aviso e cheguei 18 horas depois, perdendo o primeiro dia de férias. Achei que seria impossível resolver, mas a equipe cuidou de tudo de forma 100% digital. Recebi a indenização sem pisar num fórum!"
-                                </p>
-                            </div>
-                            <div class="card-author-info">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Mariana Castro" class="author-avatar">
-                                <div class="author-meta">
-                                    <h5>Mariana Castro</h5>
-                                    <span>Voo Cancelado • TAP Air Portugal</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Depoimento 2 -->
-                        <div class="testimonial-card">
-                            <div>
-                                <div class="card-stars">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </div>
-                                <span class="card-amount-tag"><i class="fas fa-check"></i> R$ 10.000,00 Recebidos</span>
-                                <p class="card-quote">
-                                    "Minha mala com pertences e roupas de trabalho sumiu numa viagem a trabalho para Recife e só entregaram 8 dias depois. Segui as orientações do balcão pelo site, guardei o RIB e os especialistas conseguiram indenização máxima por Danos Morais!"
-                                </p>
-                            </div>
-                            <div class="card-author-info">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Carlos Eduardo Mendes" class="author-avatar">
-                                <div class="author-meta">
-                                    <h5>Carlos Eduardo Mendes</h5>
-                                    <span>Mala Extraviada • LATAM Airlines</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Depoimento 3 -->
-                        <div class="testimonial-card">
-                            <div>
-                                <div class="card-stars">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </div>
-                                <span class="card-amount-tag"><i class="fas fa-check"></i> R$ 1.800 no PIX + R$ 6.000</span>
-                                <p class="card-quote">
-                                    "Fui barrado no portão em Congonhas por overbooking. Com a minuta do site, exigi os R$ 1.800 na hora no balcão e depois entramos com o pedido judicial pelos transtornos. Foi a melhor decisão, atendimento impecável!"
-                                </p>
-                            </div>
-                            <div class="card-author-info">
-                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Rodrigo Tavares" class="author-avatar">
-                                <div class="author-meta">
-                                    <h5>Rodrigo Tavares</h5>
-                                    <span>Overbooking • Gol Linhas Aéreas</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Depoimento 4 -->
-                        <div class="testimonial-card">
-                            <div>
-                                <div class="card-stars">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </div>
-                                <span class="card-amount-tag"><i class="fas fa-check"></i> R$ 7.200,00 Recebidos</span>
-                                <p class="card-quote">
-                                    "Perdemos nossa conexão para Miami por atraso no trecho inicial de Curitiba. Ficamos desamparados no saguão de madrugada sem hotel. O suporte jurídico foi rápido, humano e conquistou a justiça que merecíamos."
-                                </p>
-                            </div>
-                            <div class="card-author-info">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Camila e Fernando" class="author-avatar">
-                                <div class="author-meta">
-                                    <h5>Camila Albuquerque</h5>
-                                    <span>Perda de Conexão • American Airlines</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Depoimento 5 -->
-                        <div class="testimonial-card">
-                            <div>
-                                <div class="card-stars">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </div>
-                                <span class="card-amount-tag"><i class="fas fa-check"></i> R$ 9.400,00 Recebidos</span>
-                                <p class="card-quote">
-                                    "Minha avó é idosa e ficou 7 horas sentada no chão sem que dessem sequer uma garrafa de água durante um cancelamento da Azul. O respeito com que nos atenderam e a indenização que conseguiram trouxeram alívio à nossa família."
-                                </p>
-                            </div>
-                            <div class="card-author-info">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80" alt="Lucas Barbosa" class="author-avatar">
-                                <div class="author-meta">
-                                    <h5>Lucas Barbosa</h5>
-                                    <span>Atraso Grave sem Assistência • Azul</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Controles do Carrossel -->
-                <div class="carousel-controls">
-                    <button type="button" class="carousel-btn" id="prevTestimonial" aria-label="Depoimento Anterior">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <div class="carousel-dots" id="carouselDots"></div>
-                    <button type="button" class="carousel-btn" id="nextTestimonial" aria-label="Próximo Depoimento">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-
-            </div>
-        </section>
 
         <!-- =========================================================================
-             SEÇÃO 4: QUANTO VOCÊ PODE RECEBER (QUADRO INTERATIVO DE VALORES POR KM)
+             SEÇÃO 4: QUANTO VOCÊ PODE RECEBER (QUADRO INTERATIVO DE VALORES)
              ========================================================================= -->
         <section class="values-matrix-section" id="valores">
             <div class="values-container">
                 
                 <div class="values-header">
-                    <span class="values-kicker">Parâmetros Oficiais de Compensação</span>
+                    <span class="values-kicker">Parâmetros de Referência</span>
                     <h2>Quanto Você Pode Receber por Voo Atrasado ou Cancelado?</h2>
-                    <p>Os valores de indenização são balizados pela distância percorrida da rota, tempo de atraso na chegada e gravidade do dano moral suportado. Explore o quadro interativo abaixo:</p>
+                    <p>Os valores de indenização são balizados pela distância percorrida da rota, tempo de atraso na chegada e gravidade do dano suportado. Explore o quadro interativo abaixo:</p>
                 </div>
 
                 <!-- Seletor em Pílulas Interativo -->
@@ -1118,9 +1178,9 @@ Atenciosamente,
                         <p class="distance-example-routes">Exemplos: Rio de Janeiro ➔ São Paulo, Curitiba ➔ Porto Alegre, Belo Horizonte ➔ Brasília</p>
                         
                         <div class="compensation-amount-box">
-                            <span>Compensação Base:</span>
+                            <span>Compensação Base Estimada:</span>
                             <h3>Até R$ 1.200,00</h3>
-                            <small>+ Danos Morais de até R$ 5.000 a R$ 8.000</small>
+                            <small>+ Eventual Dano Moral, conforme o caso</small>
                         </div>
 
                         <ul class="distance-features-list">
@@ -1130,7 +1190,7 @@ Atenciosamente,
                             <li><i class="fas fa-check"></i> Hotel com translado em caso de pernoite</li>
                         </ul>
 
-                        <a href="#simulador" class="btn-card-simulate">Calcular Minha Rota <i class="fas fa-arrow-right"></i></a>
+                        <a href="#simulador" class="btn-card-simulate">Analisar Minha Rota <i class="fas fa-arrow-right"></i></a>
                     </div>
 
                     <!-- Card 2: Média -->
@@ -1140,19 +1200,19 @@ Atenciosamente,
                         <p class="distance-example-routes">Exemplos: São Paulo ➔ Fortaleza, Salvador ➔ Manaus, Rio ➔ Buenos Aires ou Santiago</p>
                         
                         <div class="compensation-amount-box">
-                            <span>Compensação Base:</span>
+                            <span>Compensação Base Estimada:</span>
                             <h3>Até R$ 2.000,00</h3>
-                            <small>+ Danos Morais de até R$ 8.000 a R$ 10.000</small>
+                            <small>+ Eventual Dano Moral, conforme o caso</small>
                         </div>
 
                         <ul class="distance-features-list">
                             <li><i class="fas fa-check"></i> Perda de conexões críticas</li>
                             <li><i class="fas fa-check"></i> Ressarcimento de diárias de hospedagem perdidas</li>
                             <li><i class="fas fa-check"></i> Cancelamento sem aviso de 72 horas</li>
-                            <li><i class="fas fa-check"></i> Indenização por estresse e constrangimento</li>
+                            <li><i class="fas fa-check"></i> Possibilidade de indenização por dano moral</li>
                         </ul>
 
-                        <a href="#simulador" class="btn-card-simulate">Calcular Minha Rota <i class="fas fa-arrow-right"></i></a>
+                        <a href="#simulador" class="btn-card-simulate">Analisar Minha Rota <i class="fas fa-arrow-right"></i></a>
                     </div>
 
                     <!-- Card 3: Longa -->
@@ -1162,19 +1222,19 @@ Atenciosamente,
                         <p class="distance-example-routes">Exemplos: Brasil ➔ Estados Unidos (Miami/NY), Europa (Lisboa/Paris), Caribe ou Ásia</p>
                         
                         <div class="compensation-amount-box">
-                            <span>Compensação Base:</span>
+                            <span>Compensação Base Estimada:</span>
                             <h3>Até R$ 3.500,00</h3>
-                            <small>+ Danos Morais podendo atingir até R$ 10.000 a R$ 12.000</small>
+                            <small>+ Eventual Dano Moral, conforme o caso</small>
                         </div>
 
                         <ul class="distance-features-list">
                             <li><i class="fas fa-check"></i> Convenção de Montreal + Código de Defesa do Consumidor</li>
                             <li><i class="fas fa-check"></i> Compensação internacional por extravio de bagagem</li>
-                            <li><i class="fas fa-check"></i> Reembolso integral de gastos de sobrevivência</li>
-                            <li><i class="fas fa-check"></i> Alta jurisprudência em tribunais brasileiros</li>
+                            <li><i class="fas fa-check"></i> Reembolso de gastos de sobrevivência</li>
+                            <li><i class="fas fa-check"></i> Jurisprudência favorável em tribunais brasileiros</li>
                         </ul>
 
-                        <a href="#simulador" class="btn-card-simulate">Calcular Minha Rota <i class="fas fa-arrow-right"></i></a>
+                        <a href="#simulador" class="btn-card-simulate">Analisar Minha Rota <i class="fas fa-arrow-right"></i></a>
                     </div>
 
                 </div>
@@ -1182,7 +1242,7 @@ Atenciosamente,
                 <!-- Simulador Rápido com Slider Interativo -->
                 <div class="interactive-route-simulator">
                     <h3><i class="fas fa-sliders-h" style="color: #DA9727;"></i> Teste a Distância do Seu Voo no Slider Interativo</h3>
-                    <p>Arraste a barra abaixo para visualizar o cálculo estimado de acordo com a distância do seu trecho aéreo:</p>
+                    <p>Arraste a barra abaixo para visualizar a estimativa de acordo com a distância do seu trecho aéreo:</p>
                     
                     <div class="slider-container">
                         <input type="range" id="kmRangeSlider" min="200" max="9500" value="1200" step="50">
@@ -1198,24 +1258,30 @@ Atenciosamente,
                             <span>Classificação da Rota</span>
                         </div>
                         <div class="dynamic-badge">
-                            <strong id="currentCompDisplay">Até R$ 1.200,00 + Danos Morais</strong>
-                            <span>Estimativa de Indenização</span>
+                            <strong id="currentCompDisplay">Até R$ 1.200,00 + Eventual Dano Moral</strong>
+                            <span>Estimativa de Referência</span>
                         </div>
                     </div>
+                </div>
+
+                <!-- DISCLAIMER LEGAL DOS VALORES -->
+                <div class="values-legal-disclaimer">
+                    <i class="fas fa-info-circle" style="color: #DA9727; margin-right: 6px;"></i>
+                    <strong>Nota importante:</strong> Os valores apresentados são apenas estimativos. A existência e o valor de eventual indenização dependem da análise das circunstâncias de cada caso.
                 </div>
 
             </div>
         </section>
 
         <!-- =========================================================================
-             SEÇÃO 5: COMO FUNCIONA (JORNADA EM 4 ETAPAS)
+             SEÇÃO 5: COMO FUNCIONA A DEFESA DOS SEUS DIREITOS
              ========================================================================= -->
         <section class="how-it-works-section" id="como-funciona">
             <div class="how-container">
                 
                 <div class="how-header">
                     <span class="how-kicker">Transparência & Praticidade</span>
-                    <h2>Como Funciona o Resgate da Sua Indenização?</h2>
+                    <h2>Como Funciona a Defesa dos Seus Direitos?</h2>
                     <p>Processo simples, rápido e 100% digital. Você não precisa enfrentar filas nem comparecer a audiências:</p>
                 </div>
 
@@ -1223,30 +1289,30 @@ Atenciosamente,
                     
                     <div class="step-card-box">
                         <span class="step-card-number">01</span>
-                        <div class="step-card-icon"><i class="fas fa-laptop"></i></div>
-                        <h4>1. Simulação Online Gratuita</h4>
-                        <p>Você informa os dados do voo no nosso simulador em menos de 1 minuto e descobre imediatamente a viabilidade jurídica do seu pedido.</p>
+                        <div class="step-card-icon"><i class="fas fa-comment-dots"></i></div>
+                        <h4>1. Conte o que aconteceu</h4>
+                        <p>Você nos relata o problema com o seu voo, informando os dados básicos da viagem. Pode ser pelo simulador do site ou diretamente pelo WhatsApp.</p>
                     </div>
 
                     <div class="step-card-box">
                         <span class="step-card-number">02</span>
-                        <div class="step-card-icon"><i class="fas fa-camera"></i></div>
-                        <h4>2. Envio Digital de Fotos</h4>
-                        <p>Basta tirar foto do seu bilhete de embarque, recibos e e-mails pelo próprio WhatsApp. Se não tiver os bilhetes, ajudamos a resgatar.</p>
+                        <div class="step-card-icon"><i class="fas fa-search"></i></div>
+                        <h4>2. Analisamos o seu caso</h4>
+                        <p>Nossa equipe especializada analisa a viabilidade jurídica do seu caso, verificando documentos, prazos e circunstâncias para orientá-lo da melhor forma.</p>
                     </div>
 
                     <div class="step-card-box">
                         <span class="step-card-number">03</span>
                         <div class="step-card-icon"><i class="fas fa-gavel"></i></div>
-                        <h4>3. Atuação Especializada</h4>
-                        <p>Nossos advogados especializados em Direito Aeronáutico notificam a companhia aérea e cobram o valor justo por acordo ou via judicial.</p>
+                        <h4>3. Cuidamos das medidas necessárias</h4>
+                        <p>Tomamos as providências cabíveis — notificação à companhia aérea, negociação extrajudicial ou medida judicial — buscando o melhor resultado para você.</p>
                     </div>
 
                     <div class="step-card-box">
                         <span class="step-card-number">04</span>
-                        <div class="step-card-icon"><i class="fas fa-money-check-alt"></i></div>
-                        <h4>4. Dinheiro Direto na Sua Conta</h4>
-                        <p>A indenização conquistada é creditada diretamente na sua conta bancária via PIX ou TED. Você só comemora a justiça feita!</p>
+                        <div class="step-card-icon"><i class="fas fa-laptop"></i></div>
+                        <h4>4. Você acompanha tudo de forma simples e online</h4>
+                        <p>Sem burocracia e sem sair de casa. Você recebe atualizações sobre cada etapa do seu caso, de forma clara e transparente.</p>
                     </div>
 
                 </div>
@@ -1254,11 +1320,11 @@ Atenciosamente,
                 <!-- Banner Risco Zero -->
                 <div class="risk-zero-banner">
                     <div class="risk-zero-text">
-                        <h3><i class="fas fa-shield-virus"></i> Compromisso Risco Zero: No Win, No Fee</h3>
-                        <p>Você não desembolsa nenhum valor para iniciar a solicitação. Cobramos nossos honorários contratuais exclusivamente como porcentagem do valor que você efetivamente receber. Se não houver indenização, você não paga absolutamente nada.</p>
+                        <h3><i class="fas fa-shield-virus"></i> Pagamento Somente em Caso de Êxito</h3>
+                        <p>Você não desembolsa nenhum valor para iniciar a análise. Nossos honorários são cobrados exclusivamente como porcentagem do valor que você efetivamente receber. Se não houver resultado, você não paga nada.</p>
                     </div>
                     <a href="#simulador" class="btn-primary-gold">
-                        <i class="fas fa-paper-plane"></i> Iniciar Análise Risco Zero
+                        <i class="fas fa-paper-plane"></i> Iniciar Análise do Meu Caso
                     </a>
                 </div>
 
@@ -1266,58 +1332,58 @@ Atenciosamente,
         </section>
 
         <!-- =========================================================================
-             SEÇÃO 6: CASOS INDENIZÁVEIS & DIREITOS ANAC RESOLUÇÃO 400
+             SEÇÃO 6: SITUAÇÕES QUE PODEM GERAR DIREITOS AO PASSAGEIRO
              ========================================================================= -->
         <section class="cases-section" id="casos">
             <div class="cases-container">
                 
                 <div class="cases-header">
                     <span class="cases-kicker">Conheça Suas Garantias</span>
-                    <h2>Principais Situações com Direito a Indenização</h2>
-                    <p>Se você passou por qualquer um dos transtornos abaixo nos últimos 5 anos, você pode receber indenização financeira:</p>
+                    <h2>Situações que Podem Gerar Direitos ao Passageiro</h2>
+                    <p>Se você passou por qualquer uma das situações abaixo, seu caso pode ter fundamentos jurídicos para buscar uma indenização:</p>
                 </div>
 
                 <div class="cases-grid">
                     
                     <div class="case-card">
                         <div class="case-icon-wrap"><i class="fas fa-clock"></i></div>
-                        <h4>Atraso de Voo Superior a 4 Horas</h4>
-                        <p>Chegar ao destino final com 4 horas ou mais de atraso gera direito a compensação por danos morais presumidos e ressarcimento de perdas de compromissos.</p>
+                        <h4>✈️ Atraso de Voo</h4>
+                        <p>Chegar ao destino final com atraso significativo pode gerar direito a compensação por danos morais e ressarcimento de perdas de compromissos, conforme as circunstâncias.</p>
                         <span class="case-law-tag">Art. 20, Resolução 400 ANAC</span>
                     </div>
 
                     <div class="case-card">
                         <div class="case-icon-wrap"><i class="fas fa-ban"></i></div>
-                        <h4>Voo Cancelado sem Aviso Prévio</h4>
-                        <p>A empresa tem obrigação de avisar alterações com pelo menos 72 horas de antecedência. Não havendo aviso, a reacomodação e o dano moral são exigíveis.</p>
+                        <h4>✈️ Cancelamento</h4>
+                        <p>A empresa tem obrigação de avisar alterações com antecedência. Não havendo aviso adequado, a reacomodação e eventual indenização podem ser exigíveis.</p>
                         <span class="case-law-tag">Art. 12, Resolução 400 ANAC</span>
                     </div>
 
                     <div class="case-card">
                         <div class="case-icon-wrap"><i class="fas fa-user-slash"></i></div>
-                        <h4>Overbooking (Preterição de Embarque)</h4>
-                        <p>Quando a companhia vende mais assentos do que a capacidade da aeronave e impede seu embarque. Dá direito a PIX imediato no balcão e indenização na Justiça.</p>
+                        <h4>✈️ Preterição de Embarque</h4>
+                        <p>Quando a companhia vende mais assentos do que a capacidade da aeronave e impede seu embarque. A norma prevê compensação financeira imediata e possível indenização adicional.</p>
                         <span class="case-law-tag">Art. 24, Resolução 400 ANAC</span>
                     </div>
 
                     <div class="case-card">
                         <div class="case-icon-wrap"><i class="fas fa-suitcase-rolling"></i></div>
-                        <h4>Bagagem Extraviada ou Danificada</h4>
-                        <p>Ficar sem suas roupas fora de casa ou ter sua mala quebrada dá direito ao pagamento de compras de emergência e indenização por danos materiais e morais.</p>
+                        <h4>🧳 Problemas com Bagagem</h4>
+                        <p>Extravio, atraso ou dano à bagagem pode gerar direito ao pagamento de compras de emergência e eventual indenização por danos materiais e morais.</p>
                         <span class="case-law-tag">Art. 32 e 33, ANAC & Montreal</span>
                     </div>
 
                     <div class="case-card">
                         <div class="case-icon-wrap"><i class="fas fa-exchange-alt"></i></div>
-                        <h4>Perda de Voo de Conexão</h4>
-                        <p>Se o primeiro trecho atrasou e fez você perder o voo seguinte, a companhia deve bancar hotel, transporte e alimentação, além de indenizar o estresse gerado.</p>
+                        <h4>💰 Reembolso Não Realizado</h4>
+                        <p>Se a companhia aérea não realizou o reembolso devido em caso de cancelamento ou desistência dentro do prazo legal, você pode ter direito a receber o valor de volta com correção.</p>
                         <span class="case-law-tag">Código de Defesa do Consumidor</span>
                     </div>
 
                     <div class="case-card">
                         <div class="case-icon-wrap"><i class="fas fa-utensils"></i></div>
-                        <h4>Falta de Assistência Material</h4>
-                        <p>Esperar horas no aeroporto sem voucher para almoço, jantar, água ou hotel durante a madrugada configura negligência com indenização ampliada.</p>
+                        <h4>📋 Falha na Assistência ao Passageiro</h4>
+                        <p>Esperar horas no aeroporto sem alimentação, comunicação ou hospedagem durante a madrugada pode configurar falha na prestação do serviço, com possibilidade de indenização.</p>
                         <span class="case-law-tag">Art. 26 e 27, Resolução 400 ANAC</span>
                     </div>
 
@@ -1327,7 +1393,7 @@ Atenciosamente,
         </section>
 
         <!-- =========================================================================
-             SEÇÃO 7: FAQ INTERATIVO (PERGUNTAS FREQUENTES ACCORDION)
+             SEÇÃO 7: FAQ INTERATIVO (PERGUNTAS FREQUENTES)
              ========================================================================= -->
         <section class="faq-section" id="faq">
             <div class="faq-container">
@@ -1335,28 +1401,68 @@ Atenciosamente,
                 <div class="faq-header">
                     <span class="faq-kicker">Tire Todas as Suas Dúvidas</span>
                     <h2>Perguntas Frequentes dos Passageiros</h2>
-                    <p>Respostas claras e transparentes sobre prazos, custos e procedimentos legais:</p>
+                    <p>Respostas claras e transparentes sobre prazos, custos e procedimentos:</p>
                 </div>
 
                 <div class="faq-accordion">
                     
                     <div class="faq-item active">
                         <button type="button" class="faq-question-btn">
-                            <span>Quanto tempo eu tenho para cobrar a indenização do meu voo?</span>
+                            <span>Preciso pagar alguma coisa para analisar meu caso?</span>
                             <i class="fas fa-chevron-down faq-icon-arrow"></i>
                         </button>
                         <div class="faq-answer-content">
-                            <p>Para voos <strong>nacionais (domésticos)</strong> dentro do Brasil, o prazo prescricional é de até <strong>5 anos</strong> a contar da data do voo, conforme o Código de Defesa do Consumidor. Já para voos <strong>internacionais</strong>, o prazo é de <strong>2 anos</strong> com base na Convenção de Montreal. Mesmo que seu voo tenha ocorrido meses ou anos atrás, você ainda pode receber sua indenização!</p>
+                            <p><strong>Não.</strong> A análise inicial do seu caso é sem custo. Trabalhamos com pagamento somente em caso de êxito: você só paga se e quando houver resultado efetivo. Se por qualquer motivo a solicitação não obtiver sucesso, você não tem nenhum custo.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button type="button" class="faq-question-btn">
-                            <span>Eu preciso pagar alguma quantia adiantada para iniciar o processo?</span>
+                            <span>Preciso ir até um escritório?</span>
                             <i class="fas fa-chevron-down faq-icon-arrow"></i>
                         </button>
                         <div class="faq-answer-content">
-                            <p><strong>Não! Zero custo inicial.</strong> Trabalhamos sob a cláusula de êxito: você só paga os honorários se e quando a indenização for depositada em sua conta. Se por qualquer motivo a solicitação não obtiver sucesso, você não tem nenhum custo.</p>
+                            <p><strong>Não.</strong> Todo o atendimento é 100% digital. Você nos envia os documentos pelo WhatsApp, e-mail ou pelo próprio site. Não é necessário comparecer a nenhum escritório físico. Atendemos passageiros de todos os estados do Brasil.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question-btn">
+                            <span>Quanto tempo tenho para buscar meus direitos?</span>
+                            <i class="fas fa-chevron-down faq-icon-arrow"></i>
+                        </button>
+                        <div class="faq-answer-content">
+                            <p>Para voos <strong>nacionais (domésticos)</strong> dentro do Brasil, o prazo prescricional é de até <strong>5 anos</strong> a contar da data do voo, conforme o Código de Defesa do Consumidor. Já para voos <strong>internacionais</strong>, o prazo é de <strong>2 anos</strong> com base na Convenção de Montreal. Mesmo que seu voo tenha ocorrido meses ou anos atrás, ainda pode ser possível buscar seus direitos.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question-btn">
+                            <span>A companhia aérea pode negar minha indenização?</span>
+                            <i class="fas fa-chevron-down faq-icon-arrow"></i>
+                        </button>
+                        <div class="faq-answer-content">
+                            <p>A companhia aérea pode apresentar defesas e justificativas, mas isso não significa que o passageiro não tenha direitos. Existem situações em que a lei é clara na proteção do consumidor. Cada caso é analisado individualmente para verificar a viabilidade da demanda e as melhores estratégias de atuação.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question-btn">
+                            <span>E se eu já tiver recebido assistência da companhia?</span>
+                            <i class="fas fa-chevron-down faq-icon-arrow"></i>
+                        </button>
+                        <div class="faq-answer-content">
+                            <p><strong>Receber assistência material (lanche, hotel, remarcação) é uma obrigação legal da companhia durante a espera</strong>, e isso não exclui necessariamente o direito a eventuais indenizações por danos morais. O fornecimento de assistência e a indenização por dano moral são questões distintas, que precisam ser analisadas caso a caso.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question-btn">
+                            <span>Posso pedir indenização mesmo tendo aceitado o reembolso?</span>
+                            <i class="fas fa-chevron-down faq-icon-arrow"></i>
+                        </button>
+                        <div class="faq-answer-content">
+                            <p>Depende das circunstâncias e do que foi assinado. Em muitos casos, ter recebido o reembolso da passagem não impede a busca por indenização por danos morais, pois são pretensões de natureza distinta. No entanto, é fundamental analisar se houve assinatura de termos de quitação geral. Por isso, recomendamos a análise do seu caso específico.</p>
                         </div>
                     </div>
 
@@ -1366,27 +1472,17 @@ Atenciosamente,
                             <i class="fas fa-chevron-down faq-icon-arrow"></i>
                         </button>
                         <div class="faq-answer-content">
-                            <p>Não tem problema! Basta ter o e-mail de confirmação da compra, o código localizador da reserva ou o comprovante do cartão de crédito. Com esses dados, nossa equipe consegue resgatar todo o histórico do voo perante os sistemas das companhias aéreas e da ANAC.</p>
+                            <p>Não tem problema! Basta ter o e-mail de confirmação da compra, o código localizador da reserva ou o comprovante do cartão de crédito. Com esses dados, nossa equipe consegue auxiliar no resgate do histórico do voo junto aos sistemas das companhias aéreas.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button type="button" class="faq-question-btn">
-                            <span>A companhia aérea me deu lanche e remarcou o voo. Ainda tenho direito a indenização?</span>
+                            <span>Eu precisarei comparecer a alguma audiência presencial?</span>
                             <i class="fas fa-chevron-down faq-icon-arrow"></i>
                         </button>
                         <div class="faq-answer-content">
-                            <p><strong>Sim, com certeza!</strong> O fornecimento de lanche, refeição ou hotel é apenas uma assistência material obrigatória por lei durante a espera, e NÃO anula o Dano Moral causado pelo atraso superior a 4 horas, cancelamento repentino ou perda de dias da sua viagem.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button type="button" class="faq-question-btn">
-                            <span>Eu precisarei comparecer a alguma audiência ou tribunal presencial?</span>
-                            <i class="fas fa-chevron-down faq-icon-arrow"></i>
-                        </button>
-                        <div class="faq-answer-content">
-                            <p>Na imensa maioria dos casos, <strong>não</strong>. Os processos no Brasil hoje são 100% digitais. Caso haja alguma audiência de conciliação por exigência do juiz, ela é realizada por videochamada pelo celular no conforto da sua casa.</p>
+                            <p>Na imensa maioria dos casos, <strong>não</strong>. Os processos no Brasil hoje são predominantemente digitais. Caso haja alguma audiência de conciliação por exigência do juiz, ela costuma ser realizada por videochamada.</p>
                         </div>
                     </div>
 
@@ -1396,7 +1492,7 @@ Atenciosamente,
                             <i class="fas fa-chevron-down faq-icon-arrow"></i>
                         </button>
                         <div class="faq-answer-content">
-                            <p>Em acordos extrajudiciais rápidos, o pagamento costuma ocorrer entre <strong>30 a 90 dias</strong>. Caso seja necessária ação no Juizado Especial Cível, o prazo médio costuma variar de <strong>4 a 8 meses</strong>, dependendo da comarca.</p>
+                            <p>Em acordos extrajudiciais, o pagamento costuma ocorrer entre <strong>30 a 90 dias</strong>. Caso seja necessária ação judicial, o prazo médio varia de <strong>4 a 8 meses</strong>, dependendo da comarca e da complexidade do caso.</p>
                         </div>
                     </div>
 
@@ -1406,24 +1502,24 @@ Atenciosamente,
         </section>
 
         <!-- =========================================================================
-             SEÇÃO 8: CTA FINAL MAGNÉTICO
+             SEÇÃO 8: CTA FINAL
              ========================================================================= -->
         <section class="final-cta-section">
             <div class="final-cta-container">
                 <div class="final-cta-icon">
-                    <i class="fas fa-hand-holding-usd"></i>
+                    <i class="fas fa-balance-scale"></i>
                 </div>
-                <h2>Não Deixe Seu Prazo Prescrever.<br>Exija Seus <span>Direitos Agora Mesmo!</span></h2>
+                <h2>Não Deixe Seu Prazo Prescrever.<br>Busque Seus <span>Direitos Agora.</span></h2>
                 <p>
-                    As companhias aéreas lucram bilhões enquanto deixam passageiros desamparados nos aeroportos. Faça sua simulação gratuita agora e deixe nossa equipe especialista lutar pelo seu dinheiro.
+                    Problemas com voos podem gerar direitos ao passageiro. Faça sua análise inicial sem custo e deixe nossa equipe especializada cuidar do seu caso.
                 </p>
 
                 <div class="final-cta-actions">
                     <a href="https://wa.me/5561991147699?text=Ol%C3%A1,%20gostaria%20de%20saber%20se%20meu%20voo%20tem%20direito%20a%20indeniza%C3%A7%C3%A3o!" target="_blank" class="btn-cta-whatsapp-giant">
-                        <i class="fab fa-whatsapp"></i> Falar com Especialista no WhatsApp Agora
+                        <i class="fab fa-whatsapp"></i> Falar com Especialista no WhatsApp
                     </a>
                     <a href="#simulador" class="btn-primary-gold">
-                        <i class="fas fa-calculator"></i> Simular Valor do Meu Voo
+                        <i class="fas fa-search"></i> Analisar Meu Caso
                     </a>
                 </div>
 
@@ -1437,81 +1533,51 @@ Atenciosamente,
     </main>
 
     <!-- =========================================================================
-         RODAPÉ DO SITE (FOOTER COMPLETO)
+         RODAPÉ SOFISTICADO v4
          ========================================================================= -->
     <footer class="site-footer">
-        <div class="footer-container">
-            
-            <div class="footer-brand">
-                <div class="logo-placeholder-box">
-                    <div class="logo-emblem">
-                        <i class="fas fa-plane-departure"></i>
-                    </div>
-                    <div class="logo-text-group">
-                        <div class="logo-title">
-                            <span class="white-text">VOO</span>
-                            <span class="gold-text">Direto</span>
-                        </div>
-                        <span class="logo-hint">Defesa do Passageiro</span>
-                    </div>
+
+        <!-- Bloco principal centralizado — fora do grid container original -->
+        <div class="footer-v4-wrapper">
+
+            <!-- Identidade Central -->
+            <div class="footer-v4-identity">
+                <div class="footer-brand-name">
+                    <span class="white-text">VOO </span><span class="gold-text">DIRETO</span><span class="plus-text">+</span>
                 </div>
-                <p>
-                    Assessoria especializada na defesa dos direitos dos passageiros do transporte aéreo civil nacional e internacional. Atuação focada no restabelecimento do equilíbrio e respeito ao consumidor.
+                <div class="footer-v4-tagline">Direito do Consumidor Aéreo</div>
+                <p class="footer-v4-desc">
+                    Especialistas na defesa dos direitos dos passageiros.
                 </p>
-            </div>
-
-            <div class="footer-column">
-                <h4>Navegação Rápida</h4>
-                <ul class="footer-links">
-                    <li><a href="#hero">Início</a></li>
-                    <li><a href="#simulador">Simulador de Indenização</a></li>
-                    <li><a href="#orientacoes">Guia no Aeroporto</a></li>
-                    <li><a href="#especialista">Nosso Especialista</a></li>
-                    <li><a href="#depoimentos">Depoimentos</a></li>
-                    <li><a href="#valores">Quadro de Valores</a></li>
-                    <li><a href="#como-funciona">Como Funciona</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h4>Direitos do Consumidor</h4>
-                <ul class="footer-links">
-                    <li><a href="#casos">Atraso Superior a 4h</a></li>
-                    <li><a href="#casos">Cancelamento de Voo</a></li>
-                    <li><a href="#casos">Overbooking (Preterição)</a></li>
-                    <li><a href="#casos">Extravio de Bagagem</a></li>
-                    <li><a href="#casos">Perda de Conexão</a></li>
-                    <li><a href="#faq">Prazos de Prescrição</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h4>Atendimento Especializado</h4>
-                <div class="footer-contact-info">
-                    <li>
-                        <i class="fab fa-whatsapp"></i>
-                        <span>WhatsApp Direto:<br><strong>+55 (61) 99114-7699</strong></span>
-                    </li>
-                    <li>
-                        <i class="fas fa-user-shield"></i>
-                        <span>Equipe Jurídica:<br><strong>Especialistas em Direito Aéreo</strong></span>
-                    </li>
-                    <li>
-                        <i class="fas fa-globe-americas"></i>
-                        <span>Atendimento Digital:<br>Em todos os estados do Brasil e voos internacionais</span>
-                    </li>
+                <div class="footer-v4-services">
+                    <span>Atrasos</span>
+                    <span>Cancelamentos</span>
+                    <span>Bagagem</span>
+                    <span>Preterição</span>
+                    <span>Reembolsos</span>
                 </div>
             </div>
+
+            <!-- Navegação Institucional -->
+            <nav class="footer-v4-nav">
+                <a href="#hero">Quem Somos</a>
+                <a href="#como-funciona">Como Funciona</a>
+                <a href="#casos">Direitos do Passageiro</a>
+                <a href="#simulador">Analisar Meu Caso</a>
+                <a href="https://wa.me/5561991147699" target="_blank">Contato</a>
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Uso</a>
+            </nav>
 
         </div>
 
+
         <div class="footer-disclaimer-legal">
-            <strong>Aviso de Conformidade Legal & OAB:</strong> Este website possui conteúdo estritamente informativo e educativo sobre direitos do consumidor no transporte aéreo, em conformidade com o Provimento nº 205/2021 da OAB e o Código de Ética e Disciplina da Advocacia. O preenchimento do simulador e a troca de mensagens não constituem contratação imediata nem garantia de resultado patrimonial, dependendo da análise fática e documental de cada caso concreto.
+            <strong>Aviso de Conformidade Legal & OAB:</strong> Este website possui conteúdo estritamente informativo e educativo sobre direitos do consumidor no transporte aéreo, em conformidade com o Provimento nº 205/2021 da OAB e o Código de Ética e Disciplina da Advocacia. O preenchimento do simulador e a troca de mensagens não constituem contratação imediata nem garantia de resultado, dependendo da análise fática e documental de cada caso concreto. A Voo Direto+ é especializada em Direito do Consumidor Aéreo.
         </div>
 
         <div class="footer-bottom-bar">
-            <span>&copy; 2026 Direito Voo - Suporte ao Passageiro Aéreo. Todos os direitos reservados.</span>
-            <span>Desenvolvido com Alto Padrão Visual &bull; Azul-Marinho (#021736) e Dourado (#DA9727)</span>
+            <span>&copy; 2026 Voo Direto+ — Direito do Consumidor Aéreo. Todos os direitos reservados.</span>
         </div>
     </footer>
 
