@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direito do Passageiro Aéreo | Indenização por Voo Atrasado, Cancelado e Bagagem</title>
+    
+    <!-- Meta Tags SEO -->
+    <meta name="description" content="Saiba se seu voo tem direito a indenização de até R$ 10.000 por atrasos, cancelamentos, overbooking ou extravio de bagagem. Análise gratuita sem custos iniciais.">
+    <meta name="keywords" content="direito do passageiro aereo, indenizacao voo atrasado, voo cancelado, overbooking, anac resolucao 400, mala extraviada, advogado direito aeronautico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Folha de Estilos Personalizada com Cache Buster -->
+    <link rel="stylesheet" href="style.css?v=3.0">
+</head>
+<body>
+
+    <!-- =========================================================================
+         BACKGROUND INTERATIVO: AURA DO MOUSE + CONSTELAÇÃO + AVIÃO DE SCROLL
+         ========================================================================= -->
+    <canvas id="interactive-canvas-bg"></canvas>
+    <div class="mouse-cursor-glow" id="mouseCursorGlow"></div>
+    <div class="grid-overlay-bg"></div>
+
+    <!-- O Avião Seguidor de Scroll com Rastro Luminoso -->
+    <div class="scroll-plane-follower" id="scrollPlaneFollower" aria-hidden="true">
+        <svg viewBox="0 0 512 512">
+            <path fill="#DA9727" d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V392l198-250-254 200L18.4 300.5C7.7 296 0.6 285.5 0 273.8s6.1-22.8 16.4-28.7l448-256c10.3-5.9 23.3-4.5 33.7 1.5z"/>
+        </svg>
+    </div>
+
+    <!-- =========================================================================
+         BARRA SUPERIOR DE INFORMAÇÕES & CONFIANÇA
+         ========================================================================= -->
+    <aside class="top-announcement-bar">
+        <div class="top-bar-inner">
+            <div class="top-bar-badge">
+                <i class="fas fa-balance-scale"></i>
+                <span>Resolução nº 400 da ANAC & Código de Defesa do Consumidor</span>
+            </div>
+            <div class="top-bar-guarantees">
+                <span><i class="fas fa-shield-alt"></i> Atendimento 100% Online em Todo o Brasil</span>
+                <span><i class="fas fa-check-circle"></i> Cláusula Risco Zero: Só Paga se Ganhar</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- =========================================================================
+         HEADER AREJADO (NÃO JUNTINHO) COM ESPAÇO PREPARADO PARA A LOGO
+         ========================================================================= -->
+    <header class="site-header">
+        <div class="nav-container">
+
+            <!-- =================================================================
+                 ESPAÇO DA LOGOMARCA:
+                 Basta colar o link da imagem da sua logo no atributo src="..." abaixo!
+                 Exemplo: src="https://sua-logo.png" ou src="logo.png"
+                 Se ainda não colocou ou o link falhar, exibirá automaticamente
+                 o selo visual de alto luxo preparado.
+                 ================================================================= -->
+            <a href="#hero" class="brand-logo-anchor" title="Página Inicial">
+                <!-- Imagem da Logo Oficial com borda de 50% -->
+                <img src="logo.png.jpeg" alt="Logo" class="site-custom-logo" style="width: 46px !important; height: 46px !important; border-radius: 50% !important; object-fit: cover !important; border: 2px solid #DA9727 !important; display: none;" onload="this.style.display='block'; var fb = document.getElementById('logoFallbackIcon'); if(fb) fb.style.display='none';" onerror="this.style.display='none'; var fb = document.getElementById('logoFallbackIcon'); if(fb) fb.style.display='flex';">
+                
+                <!-- Ícone reserva caso ainda não tenha colado o link da imagem -->
+                <div class="logo-emblem" id="logoFallbackIcon">
+                    <i class="fas fa-plane-departure"></i>
+                </div>
+
+                <!-- Nome Oficial SEMPRE VISÍVEL no Celular e no Desktop -->
+                <div class="brand-text-block">
+                    <div class="brand-main-title">
+                        <span class="white-text">VOO</span>
+                        <span class="gold-text">Direto</span>
+                    </div>
+                    <span class="brand-sub-badge">Defesa do Passageiro</span>
+                </div>
+            </a>
+
+            <!-- Menu de Navegação Espaçoso e Elegante -->
+            <nav>
+                <ul class="nav-links-menu" id="navMenu">
+                    <li><a href="#simulador"><i class="fas fa-calculator"></i> Simulador</a></li>
+                    <li><a href="#orientacoes"><i class="fas fa-bullhorn"></i> No Aeroporto</a></li>
+                    <li><a href="#especialista"><i class="fas fa-user-shield"></i> Especialista</a></li>
+                    <li><a href="#depoimentos"><i class="fas fa-star"></i> Depoimentos</a></li>
+                    <li><a href="#valores"><i class="fas fa-coins"></i> Quanto Receber</a></li>
+                    <li><a href="#como-funciona"><i class="fas fa-tasks"></i> Como Funciona</a></li>
+                    <li><a href="#faq"><i class="fas fa-question-circle"></i> Dúvidas</a></li>
+                </ul>
+            </nav>
+
+            <!-- Ação de Destaque -->
+            <div class="nav-actions">
+                <a href="#simulador" class="btn-header-cta">
+                    <i class="fas fa-bolt"></i> Simular Indenização
+                </a>
+            </div>
+
+            <!-- Botão Menu Mobile -->
+            <button type="button" class="mobile-toggle-btn" id="mobileToggle" aria-label="Abrir Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+        </div>
+    </header>
+
+    <main>
+        <!-- =========================================================================
+             HERO SECTION DE ALTO IMPACTO
+             ========================================================================= -->
+        <section class="hero-section" id="hero">
+            <div class="hero-container">
+                
+                <div class="hero-text-column">
+                    <div class="hero-badge-kicker">
+                        <i class="fas fa-plane-slash"></i>
+                        <span>Voo Atrasado, Cancelado ou Mala Extraviada?</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Receba até <span class="highlight-gold">R$ 10.000,00</span> de Indenização por Problemas com Seu Voo
+                    </h1>
+                    
+                    <p class="hero-description">
+                        A legislação brasileira e a ANAC protegem o passageiro. Descubra gratuitamente em menos de 1 minuto se o seu voo é elegível a uma compensação financeira por danos morais e materiais, com <strong>Risco Zero</strong>.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="#simulador" class="btn-primary-gold">
+                            <i class="fas fa-calculator"></i> Simular Meu Caso Gratuitamente
+                        </a>
+                        <a href="#orientacoes" class="btn-secondary-outline">
+                            <i class="fas fa-exclamation-triangle"></i> Estou no Aeroporto Agora
+                        </a>
+                    </div>
+
+                    <!-- Indicadores de Confiança -->
+                    <div class="hero-stats-strip">
+                        <div class="stat-item">
+                            <h3>R$ 0,00</h3>
+                            <p>Custo Inicial (Só Paga se Ganhar)</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>+3 Milhões</h3>
+                            <p>Passageiros com Direitos Assegurados</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>100% Online</h3>
+                            <p>Sem Audiências ou Burocracia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna Visual / Cartão de Embarque Interativo -->
+                <div class="hero-visual-card">
+                    <div class="hero-floating-glass-box">
+                        <div class="glass-box-header">
+                            <div class="box-title">
+                                <i class="fas fa-ticket-alt"></i> Monitoramento de Direitos
+                            </div>
+                            <div class="box-badge-live">
+                                <span>ANAC 400 Ativa</span>
+                            </div>
+                        </div>
+
+                        <div class="flight-live-ticket">
+                            <div class="ticket-route">
+                                <div class="route-point">
+                                    <div class="route-code">GRU</div>
+                                    <div class="route-city">São Paulo</div>
+                                </div>
+                                <div class="route-arrow">
+                                    <i class="fas fa-plane"></i>
+                                    <span>ATRASO &gt; 4H</span>
+                                </div>
+                                <div class="route-point">
+                                    <div class="route-code">LIS</div>
+                                    <div class="route-city">Lisboa</div>
+                                </div>
+                            </div>
+                            <div class="ticket-detail-row">
+                                <span>Indenização Estimada:</span>
+                                <span>R$ 8.000 a R$ 10.000</span>
+                            </div>
+                            <div class="ticket-detail-row">
+                                <span>Assistência de Balcão:</span>
+                                <span>Alimentação + Hotel + Táxi</span>
+                            </div>
+                        </div>
+
+                        <ul class="hero-box-benefit-list">
+                            <li><i class="fas fa-check-circle"></i> Voo remarcado com mais de 4h gera Dano Moral</li>
+                            <li><i class="fas fa-check-circle"></i> Overbooking garante PIX de até R$ 3.600 na hora</li>
+                            <li><i class="fas fa-check-circle"></i> Mala extraviada garante reembolso de compras</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             ESPAÇO DEDICADO PARA A FOTO QUE O CLIENTE MANDOU
+             ========================================================================= -->
+        
+
+        <!-- =========================================================================
+             SEÇÃO 1: SIMULADOR DE INDENIZAÇÃO (AIRHELP STYLE)
+             ========================================================================= -->
+        <section class="calculator-section" id="simulador">
+            <div class="calc-container">
+                <div class="calc-header">
+                    <span class="calc-kicker">Simulador Gratuito de Indenização</span>
+                    <h2>Calcule se Seu Voo Tem Direito a Indenização</h2>
+                    <p>Descubra em menos de 1 minuto quanto você pode receber por transtornos em seu voo.</p>
+                </div>
+
+                <div class="calc-card">
+                    <!-- BARRA DE PROGRESSO -->
+                    <div class="calc-progress-bar">
+                        <div class="calc-progress-fill" id="calcProgressFill"></div>
+                    </div>
+                    <div class="calc-steps-indicator">
+                        <span class="step-dot active" id="dot-1">1. Rota</span>
+                        <span class="step-dot" id="dot-2">2. Voo</span>
+                        <span class="step-dot" id="dot-3">3. Problema</span>
+                        <span class="step-dot" id="dot-4">4. Resultado</span>
+                    </div>
+
+                    <!-- ETAPA 1 -->
+                    <div class="calc-step-content" id="step-1">
+                        <h3>1. De onde e para onde você viajou?</h3>
+                        <div class="calc-form-group">
+                            <label for="calc-origin">Aeroporto de Origem (De onde saiu?)</label>
+                            <div class="autocomplete-wrapper">
+                                <input type="text" id="calc-origin" placeholder="Ex: Rio de Janeiro - Santos Dumont (SDU) ou Lisboa (LIS)" autocomplete="off">
+                                <div class="autocomplete-suggestions" id="suggestions-origin"></div>
+                            </div>
+                        </div>
+
+                        <div class="calc-form-group">
+                            <label for="calc-destination">Destino Final (Para onde ia?)</label>
+                            <div class="autocomplete-wrapper">
+                                <input type="text" id="calc-destination" placeholder="Ex: São Paulo - Congonhas (CGH) ou Miami (MIA)" autocomplete="off">
+                                <div class="autocomplete-suggestions" id="suggestions-destination"></div>
+                            </div>
+                        </div>
+
+                        <div class="calc-form-group">
+                            <label>Foi um voo direto?</label>
+                            <div class="pill-options" id="direct-options">
+                                <button type="button" class="pill-btn active" data-direct="Sim, voo direto">Sim, foi voo direto</button>
+                                <button type="button" class="pill-btn" data-direct="Não, teve conexão">Não, teve conexões</button>
+                            </div>
+                        </div>
+
+                        <!-- CAMPO ADICIONAL PARA PREENCHER A CONEXÃO -->
+                        <div class="calc-form-group" id="connection-group" style="display: none;">
+                            <label for="calc-connection">Onde foi a conexão? (Cidade ou Aeroporto)</label>
+                            <div class="autocomplete-wrapper">
+                                <input type="text" id="calc-connection" placeholder="Ex: São Paulo - Guarulhos (GRU) ou Lisboa (LIS)" autocomplete="off">
+                                <div class="autocomplete-suggestions" id="suggestions-connection"></div>
+                            </div>
+                        </div>
+
+                        <div class="calc-actions">
+                            <span></span>
+                            <button type="button" class="calc-btn-next" onclick="nextStep(1)">Próximo Passo <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- ETAPA 2 -->
+                    <div class="calc-step-content" id="step-2" style="display: none;">
+                        <h3>2. Detalhes da sua viagem</h3>
+                        <div class="calc-form-group">
+                            <label for="calc-date">Data da Partida</label>
+                            <input type="date" id="calc-date">
+                        </div>
+
+                        <div class="calc-form-group">
+                            <label for="calc-airline">Com qual companhia aérea você voou?</label>
+                            <select id="calc-airline">
+                                <option value="">Selecione a Companhia Aérea</option>
+                                <option value="Gol Linhas Aéreas">Gol Linhas Aéreas</option>
+                                <option value="LATAM Airlines">LATAM Airlines</option>
+                                <option value="Azul Linhas Aéreas">Azul Linhas Aéreas</option>
+                                <option value="VoePass / MAP">VoePass / MAP</option>
+                                <option value="TAP Air Portugal">TAP Air Portugal</option>
+                                <option value="American Airlines">American Airlines</option>
+                                <option value="Air France / KLM">Air France / KLM</option>
+                                <option value="Iberia">Iberia</option>
+                                <option value="Copa Airlines">Copa Airlines</option>
+                                <option value="Lufthansa">Lufthansa</option>
+                                <option value="United Airlines">United Airlines</option>
+                                <option value="Delta Air Lines">Delta Air Lines</option>
+                                <option value="Outra Companhia Aérea">Outra Companhia Aérea</option>
+                            </select>
+                        </div>
+
+                        <div class="calc-form-group">
+                            <label for="calc-flight-num">Número do Voo (Opcional)</label>
+                            <input type="text" id="calc-flight-num" placeholder="Ex: G3 1420, AD 4560, LA 3000">
+                        </div>
+
+                        <div class="calc-actions">
+                            <button type="button" class="calc-btn-back" onclick="prevStep(2)"><i class="fas fa-arrow-left"></i> Voltar</button>
+                            <button type="button" class="calc-btn-next" onclick="nextStep(2)">Próximo Passo <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- ETAPA 3 -->
+                    <div class="calc-step-content" id="step-3" style="display: none;">
+                        <h3>3. O que aconteceu com o seu voo?</h3>
+                        
+                        <div class="calc-form-group">
+                            <label>Qual foi o problema principal?</label>
+                            <div class="pill-grid" id="issue-options">
+                                <button type="button" class="pill-card active" data-issue="Voo Atrasado"><i class="fas fa-clock"></i> Voo Atrasou</button>
+                                <button type="button" class="pill-card" data-issue="Voo Cancelado"><i class="fas fa-ban"></i> Voo Cancelado</button>
+                                <button type="button" class="pill-card" data-issue="Embarque Negado (Overbooking)"><i class="fas fa-user-slash"></i> Embarque Negado (Overbooking)</button>
+                                <button type="button" class="pill-card" data-issue="Bagagem Extraviada / Danificada"><i class="fas fa-suitcase-rolling"></i> Bagagem Extraviada</button>
+                            </div>
+                        </div>
+
+                        <!-- AVISO DE BAGAGEM EXTRAVIADA -->
+                        <div class="baggage-callout" id="baggage-notice">
+                            <i class="fas fa-check-circle" style="color: #2563EB;"></i> <strong>Extravio de Bagagem Gera Direito à Indenização!</strong><br>
+                            Para extravio ou danos à bagagem não é necessário calcular horas de atraso do voo: você já tem direito à assistência, ressarcimento de compras de emergência e indenização.
+                        </div>
+
+                        <!-- PERGUNTAS DE ATRASO (OCULTAS AO CLICAR EM BAGAGEM) -->
+                        <div id="flight-conditional-questions">
+                            <div class="calc-form-group" id="delay-hours-group">
+                                <label>Com quantas horas de atraso você chegou ao destino final?</label>
+                                <div class="pill-options" id="delay-hours-options">
+                                    <button type="button" class="pill-btn" data-delay="Menos de 2 horas">Menos de 2h</button>
+                                    <button type="button" class="pill-btn" data-delay="De 2 a 4 horas">De 2h a 4h</button>
+                                    <button type="button" class="pill-btn active" data-delay="Mais de 4 horas">Mais de 4h</button>
+                                    <button type="button" class="pill-btn" data-delay="Não cheguei ao destino">Não cheguei</button>
+                                </div>
+                            </div>
+
+                            <div class="calc-form-group" id="volunteer-group">
+                                <label>Você se ofereceu como voluntário para abrir mão do assento?</label>
+                                <div class="pill-options" id="volunteer-options">
+                                    <button type="button" class="pill-btn active" data-volunteer="Não fui voluntário">Não</button>
+                                    <button type="button" class="pill-btn" data-volunteer="Sim, fui voluntário">Sim</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="calc-form-group">
+                            <label>Você possui a documentação (Passagem ou cartão de embarque)?</label>
+                            <div class="pill-options" id="doc-options">
+                                <button type="button" class="pill-btn active" data-doc="Sim, tenho documentos">Sim, tenho a documentação</button>
+                                <button type="button" class="pill-btn" data-doc="Não tenho documentos (Preciso de ajuda para resgatar)">Não tenho a documentação</button>
+                            </div>
+                        </div>
+
+                        <div class="calc-actions">
+                            <button type="button" class="calc-btn-back" onclick="prevStep(3)"><i class="fas fa-arrow-left"></i> Voltar</button>
+                            <button type="button" class="calc-btn-next" onclick="calculateResult()">Ver Meu Resultado <i class="fas fa-check-circle"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- ETAPA 4: RESULTADO -->
+                    <div class="calc-step-content" id="step-4" style="display: none;">
+                        <div class="result-box" id="result-box-content">
+                            <!-- Injetado dinamicamente via JS -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+<section class="lawyer-profile-section" id="especialista">
+            <div class="profile-container">
+                
+                <!-- Coluna da Foto com Moldura Nobre -->
+                <div class="profile-photo-column">
+                    <div class="profile-photo-frame">
+                        <!-- =========================================================
+                             ESPAÇO DA FOTO ENVIADA:
+                             Substitua o link em src="..." abaixo pela foto que ele mandou!
+                             Exemplo: src="https://seusite.com.br/foto.jpg" ou src="foto.jpg"
+                             ========================================================= -->
+                        <img src="sobre.jpg.jpeg" alt="Foto do Especialista em Direito Aéreo" class="client-profile-photo" onerror="this.style.display='none'; document.getElementById('profilePhotoPlaceholder').style.display='flex';">
+                        
+                      
+
+                        <!-- Selo de Autoridade Flutuante -->
+                        <div class="profile-floating-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <strong>Assessoria Jurídica de Alto Nível</strong>
+                                <span>Defesa Especializada do Passageiro</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna de Texto & Autoridade -->
+                <div class="profile-text-column">
+                    <span class="section-kicker">Atendimento Direto & Humanizado</span>
+                    <h2>Defesa Intransigente dos Seus Direitos Contra os Abusos das Companhias Aéreas</h2>
+                    <p>
+                        As companhias aéreas cancelam e atrasam voos diariamente, lucram bilhões e muitas vezes deixam os passageiros sem assistência adequada. Nossa missão é restabelecer a dignidade de quem viaja, buscando as reparações financeiras mais justas e integrais pela via extrajudicial ou judicial.
+                    </p>
+
+                    <div class="profile-pillars-grid">
+                        <div class="pillar-item">
+                            <i class="fas fa-balance-scale"></i>
+                            <strong>Foco Exclusivo no Passageiro</strong>
+                            <span>Não defendemos companhias aéreas; atuamos 100% ao lado do consumidor.</span>
+                        </div>
+                        <div class="pillar-item">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <strong>Honorários no Êxito (Risco Zero)</strong>
+                            <span>Você só paga se a indenização for depositada na sua conta bancária.</span>
+                        </div>
+                        <div class="pillar-item">
+                            <i class="fas fa-laptop-house"></i>
+                            <strong>Atuação 100% Digital</strong>
+                            <span>Você envia as fotos dos bilhetes pelo WhatsApp sem sair de casa.</span>
+                        </div>
+                        <div class="pillar-item">
+                            <i class="fas fa-gavel"></i>
+                            <strong>Rigor Técnico Aeronáutico</strong>
+                            <span>Domínio profundo da Resolução 400 ANAC e Código de Defesa do Consumidor.</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/5561991147699?text=Ol%C3%A1,%20gostaria%20de%20conversar%20com%20um%20especialista%20sobre%20o%20meu%20voo!" target="_blank" class="btn-primary-gold">
+                        <i class="fab fa-whatsapp"></i> Falar Diretamente com Nossos Especialistas
+                    </a>
+                </div>
+
+            </div>
+        </section>
+        <!-- =========================================================================
+             SEÇÃO 2: GUIA E ORIENTAÇÕES AO PASSAGEIRO NO AEROPORTO
+             ========================================================================= -->
+        <section class="orientacoes-section" id="orientacoes">
+            <div class="orientacoes-container">
+                <div class="orientacoes-heading">
+                    <span class="orientacoes-kicker">Guia Prático de Balcão</span>
+                    <h2>O Que Fazer no Aeroporto Agora?</h2>
+                    <p>Seu voo atrasou, foi cancelado, você foi impedido de embarcar ou sua mala não chegou? Selecione a sua situação abaixo e veja o que exigir no balcão da companhia aérea imediatamente:</p>
+                </div>
+
+                <style>
+                /* Estilos Blindados e Garantidos para os Cards de Situação */
+                .orientacoes-container {
+                    max-width: 1200px !important;
+                    margin: 0 auto !important;
+                }
+                .scenario-selector-grid {
+                    display: grid !important;
+                    grid-template-columns: repeat(3, 1fr) !important;
+                    gap: 22px !important;
+                    margin-bottom: 35px !important;
+                }
+                .scenario-card {
+                    background: #FFFFFF !important;
+                    border: 2px solid #E2E8F0 !important;
+                    border-top: 4px solid #CBD5E1 !important;
+                    border-radius: 18px !important;
+                    padding: 24px 20px !important;
+                    cursor: pointer !important;
+                    transition: all 0.25s ease !important;
+                    display: flex !important;
+                    flex-direction: column !important;
+                    justify-content: space-between !important;
+                    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+                    user-select: none !important;
+                }
+                .scenario-card:hover {
+                    transform: translateY(-4px) !important;
+                    border-color: #CBD5E1 !important;
+                    border-top-color: #DA9727 !important;
+                    box-shadow: 0 12px 28px rgba(2, 23, 54, 0.08) !important;
+                }
+                .scenario-card.active {
+                    background: #FFFFFF !important;
+                    border: 2px solid #DA9727 !important;
+                    border-top: 5px solid #DA9727 !important;
+                    box-shadow: 0 16px 36px rgba(218, 151, 39, 0.22) !important;
+                    transform: translateY(-4px) !important;
+                }
+                .scenario-card-header {
+                    display: flex !important;
+                    justify-content: space-between !important;
+                    align-items: center !important;
+                    margin-bottom: 14px !important;
+                }
+                .scenario-icon {
+                    width: 48px !important;
+                    height: 48px !important;
+                    border-radius: 14px !important;
+                    background: #F8FAFC !important;
+                    border: 1.5px solid #E2E8F0 !important;
+                    color: #021736 !important;
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    font-size: 1.35rem !important;
+                    transition: all 0.25s ease !important;
+                }
+                .scenario-card:hover .scenario-icon {
+                    border-color: #DA9727 !important;
+                    color: #DA9727 !important;
+                }
+                .scenario-card.active .scenario-icon {
+                    background: #FEF3C7 !important;
+                    border-color: #DA9727 !important;
+                    color: #B45309 !important;
+                    box-shadow: 0 0 16px rgba(218, 151, 39, 0.3) !important;
+                }
+                .scenario-badge {
+                    font-size: 0.72rem !important;
+                    font-weight: 800 !important;
+                    text-transform: uppercase !important;
+                    letter-spacing: 0.5px !important;
+                    padding: 5px 10px !important;
+                    border-radius: 20px !important;
+                    background: #F1F5F9 !important;
+                    color: #475569 !important;
+                    border: 1px solid #E2E8F0 !important;
+                }
+                .scenario-badge.gold {
+                    background: #FEF3C7 !important;
+                    color: #92400E !important;
+                    border-color: #FCD34D !important;
+                }
+                .scenario-badge.blue {
+                    background: #EFF6FF !important;
+                    color: #1E40AF !important;
+                    border-color: #BFDBFE !important;
+                }
+                .scenario-card.active .scenario-badge {
+                    background: #FEF3C7 !important;
+                    color: #92400E !important;
+                    border-color: #DA9727 !important;
+                }
+                .scenario-card h3 {
+                    font-size: 1.18rem !important;
+                    color: #021736 !important;
+                    font-weight: 800 !important;
+                    margin-bottom: 8px !important;
+                    line-height: 1.3 !important;
+                }
+                .scenario-card p {
+                    font-size: 0.88rem !important;
+                    color: #64748B !important;
+                    line-height: 1.45 !important;
+                    margin-bottom: 18px !important;
+                }
+                .scenario-status {
+                    display: inline-flex !important;
+                    align-items: center !important;
+                    gap: 8px !important;
+                    font-size: 0.84rem !important;
+                    font-weight: 700 !important;
+                    color: #64748B !important;
+                    padding: 7px 14px !important;
+                    border-radius: 9999px !important;
+                    background: #F8FAFC !important;
+                    border: 1px solid #E2E8F0 !important;
+                    width: fit-content !important;
+                    transition: all 0.25s ease !important;
+                }
+                .scenario-status i {
+                    font-size: 0.95rem !important;
+                    color: #94A3B8 !important;
+                }
+                .scenario-card:hover .scenario-status {
+                    border-color: #DA9727 !important;
+                    color: #021736 !important;
+                }
+                .scenario-card:hover .scenario-status i {
+                    color: #DA9727 !important;
+                }
+                .scenario-card.active .scenario-status {
+                    background: #FEF3C7 !important;
+                    color: #92400E !important;
+                    border-color: #DA9727 !important;
+                }
+                .scenario-card.active .scenario-status i {
+                    color: #16A34A !important;
+                }
+                @media (max-width: 768px) {
+                    .scenario-selector-grid {
+                        grid-template-columns: 1fr !important;
+                        gap: 12px !important;
+                    }
+                    .scenario-card {
+                        padding: 16px 14px !important;
+                    }
+                }
+                </style>
+
+                <!-- SELETOR VISUAL INTERATIVO DE CASOS (CARDS MODERNOS DE ALTO IMPACTO) -->
+                <div class="scenario-selector-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 35px;">
+                    
+                    <!-- CASO 1: ATRASO / CANCELAMENTO -->
+                    <div class="scenario-card active" onclick="switchOrientacaoTab(1)" style="background: #FFFFFF; border: 2px solid #DA9727; border-top: 5px solid #DA9727; border-radius: 18px; padding: 24px 20px; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 12px 30px rgba(218, 151, 39, 0.18);">
+                        <div class="scenario-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                            <div class="scenario-icon" style="width: 48px; height: 48px; border-radius: 14px; background: #FEF3C7; border: 1.5px solid #DA9727; color: #B45309; display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <span class="scenario-badge" style="font-size: 0.74rem; font-weight: 800; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; background: #FEF3C7; color: #92400E; border: 1px solid #DA9727;">Mais Frequente</span>
+                        </div>
+                        <h3 style="font-size: 1.18rem; color: #021736; font-weight: 800; margin-bottom: 8px; line-height: 1.3;">Voo Atrasado ou Cancelado</h3>
+                        <p style="font-size: 0.88rem; color: #64748B; line-height: 1.45; margin-bottom: 18px;">Chegada com 2h, 4h ou mais de atraso, cancelamento ou perda de conexões.</p>
+                        <div class="scenario-status" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.84rem; font-weight: 700; color: #92400E; padding: 7px 14px; border-radius: 9999px; background: #FEF3C7; border: 1px solid #DA9727; width: fit-content;">
+                            <i class="fas fa-check-circle" style="color: #16A34A;"></i> <span>Caso Selecionado</span>
+                        </div>
+                    </div>
+
+                    <!-- CASO 2: OVERBOOKING -->
+                    <div class="scenario-card" onclick="switchOrientacaoTab(2)" style="background: #FFFFFF; border: 2px solid #E2E8F0; border-top: 4px solid #CBD5E1; border-radius: 18px; padding: 24px 20px; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);">
+                        <div class="scenario-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                            <div class="scenario-icon" style="width: 48px; height: 48px; border-radius: 14px; background: #F8FAFC; border: 1.5px solid #E2E8F0; color: #021736; display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
+                                <i class="fas fa-ban"></i>
+                            </div>
+                            <span class="scenario-badge gold" style="font-size: 0.74rem; font-weight: 800; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; background: #FEF3C7; color: #92400E; border: 1px solid #FCD34D;">PIX até R$ 1.800</span>
+                        </div>
+                        <h3 style="font-size: 1.18rem; color: #021736; font-weight: 800; margin-bottom: 8px; line-height: 1.3;">Overbooking (Preterição)</h3>
+                        <p style="font-size: 0.88rem; color: #64748B; line-height: 1.45; margin-bottom: 18px;">Voo superlotado e você foi impedido de embarcar involuntariamente.</p>
+                        <div class="scenario-status" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.84rem; font-weight: 700; color: #64748B; padding: 7px 14px; border-radius: 9999px; background: #F8FAFC; border: 1px solid #E2E8F0; width: fit-content;">
+                            <i class="fas fa-arrow-right" style="color: #DA9727;"></i> <span>Ver O Que Fazer</span>
+                        </div>
+                    </div>
+
+                    <!-- CASO 3: BAGAGEM -->
+                    <div class="scenario-card" onclick="switchOrientacaoTab(3)" style="background: #FFFFFF; border: 2px solid #E2E8F0; border-top: 4px solid #CBD5E1; border-radius: 18px; padding: 24px 20px; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);">
+                        <div class="scenario-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                            <div class="scenario-icon" style="width: 48px; height: 48px; border-radius: 14px; background: #F8FAFC; border: 1.5px solid #E2E8F0; color: #021736; display: flex; align-items: center; justify-content: center; font-size: 1.35rem;">
+                                <i class="fas fa-suitcase-rolling"></i>
+                            </div>
+                            <span class="scenario-badge blue" style="font-size: 0.74rem; font-weight: 800; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; background: #EFF6FF; color: #1E40AF; border: 1px solid #BFDBFE;">Exija o RIB na Hora</span>
+                        </div>
+                        <h3 style="font-size: 1.18rem; color: #021736; font-weight: 800; margin-bottom: 8px; line-height: 1.3;">Mala Extraviada ou Danificada</h3>
+                        <p style="font-size: 0.88rem; color: #64748B; line-height: 1.45; margin-bottom: 18px;">Bagagem sumiu da esteira, foi violada ou sofreu avarias no transporte.</p>
+                        <div class="scenario-status" style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.84rem; font-weight: 700; color: #64748B; padding: 7px 14px; border-radius: 9999px; background: #F8FAFC; border: 1px solid #E2E8F0; width: fit-content;">
+                            <i class="fas fa-arrow-right" style="color: #DA9727;"></i> <span>Ver O Que Fazer</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- PAINEL 1: ATRASO / CANCELAMENTO -->
+                <div class="orientacao-panel active" id="orientacao-panel-1">
+                    <div class="balcao-banner">
+                        <div class="balcao-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=700&q=80" alt="Passageiro no balcão do aeroporto" class="balcao-img">
+                        </div>
+                        <div class="balcao-speech-wrap">
+                            <span class="speech-tag"><i class="fas fa-bullhorn"></i> O Que Falar no Balcão de Atendimento:</span>
+                            <div class="speech-bubble">
+                                “SOLICITO MINHA DECLARAÇÃO DE CONTINGÊNCIA E QUERO MEU VOUCHER DE ALIMENTAÇÃO, HOSPEDAGEM E TRANSPORTE.”
+                            </div>
+                            <p class="calm-notice">💡 Respire fundo: quem vai te atender não é o culpado — seu direito é com a companhia, não com o funcionário.</p>
+                        </div>
+                    </div>
+
+                    <div class="orientacao-step">
+                        <h3><span class="step-badge">1</span> NÃO DISCUTA, NÃO GRITE: REGISTRE. QUEM REGISTRA, PROVA!</h3>
+                        <p>Mantenha a calma e reúna todas as provas visuais do transtorno ainda no aeroporto:</p>
+                        <ul>
+                            <li>Tire foto nítida do painel de embarque mostrando o voo como atrasado ou cancelado.</li>
+                            <li>Fotografe as filas no balcão e faça pequenos vídeos mostrando o tumulto e a falta de assistência.</li>
+                            <li>Guarde e fotografe TODAS as notas fiscais de gastos com alimentação, transporte, água e remédios.</li>
+                            <li>Tire foto da hora exata do embarque e do avião decolando com o relógio ou celular indicando o horário real.</li>
+                        </ul>
+                    </div>
+
+                    <div class="orientacao-step">
+                        <h3><span class="step-badge">2</span> EXIJA A DECLARAÇÃO DE CONTINGÊNCIA</h3>
+                        <p>Vá até o balcão da companhia aérea e solicite a <strong>Declaração de Contingência</strong>. Trata-se da declaração formal por escrito informando o motivo e o horário real do atraso ou cancelamento. A companhia tem obrigação de fornecer e já possui formulários prontos para isso.</p>
+                        
+                        <div class="copy-box">
+                            <div class="copy-box-header">
+                                <strong>Exemplo do teor da Declaração de Contingência:</strong>
+                            </div>
+                            <blockquote>“A [Companhia Aérea] declara para os devidos fins que o voo [Número], com rota [Origem] para [Destino], com partida originalmente programada para [Data e Hora], sofreu atraso/cancelamento por motivos operacionais/técnicos, decolando às [Novo Horário]. Atendimento registrado sob protocolo [Número].”</blockquote>
+                        </div>
+                    </div>
+
+                    <div class="orientacao-step">
+                        <h3><span class="step-badge">3</span> COMPROVAÇÃO DE PERDA DE COMPROMISSO (AUMENTE SEU DANO MORAL)</h3>
+                        <p>Se o atraso fez você perder reuniões, diárias de hotel, passeios pagos ou consultas, comprove isso imediatamente. Ainda no aeroporto, envie um e-mail formal desmarcando o compromisso:</p>
+
+                        <div class="copy-box">
+                            <div class="copy-box-header">
+                                <strong>Minuta Pronta para Copiar e Enviar por E-mail:</strong>
+                                <button type="button" class="btn-copy" onclick="copyText('minuta-compromisso-1')"><i class="fas fa-copy"></i> Copiar Texto</button>
+                            </div>
+                            <pre id="minuta-compromisso-1">Assunto: [URGENTE] Cancelamento/adiamento da reunião de [data] — atraso de voo
+
+Prezado(a) [Nome],
+
+Infelizmente, preciso adiar nossa reunião prevista para hoje, [data], às [horário].
+Meu voo [número do voo], da companhia aérea [nome da companhia], com partida de [origem] às [horário] e chegada prevista em [destino], foi [atrasado/cancelado], e não cheguei a tempo em [cidade].
+
+Dessa forma, não terei condições de comparecer ao compromisso no horário combinado. Peço desculpas pelo transtorno e proponho remarcarmos para [sugestão de nova data/horário].
+
+Fico à disposição para confirmarmos a nova data.
+
+Atenciosamente,
+[Seu Nome Completo]</pre>
+                        </div>
+                    </div>
+
+                    <div class="orientacao-step">
+                        <h3><span class="step-badge">4</span> SEUS DIREITOS POR TEMPO DE ATRASO (RESOLUÇÃO 400 ANAC)</h3>
+                        
+                        <div style="background: #FAF6F0; padding: 20px; border-radius: 14px; margin-bottom: 18px; border-left: 4px solid var(--dourado);">
+                            <h4 style="color: var(--dourado); font-size: 1.05rem; margin-bottom: 8px;">⏳ Atraso Superior a 2 Horas:</h4>
+                            <p style="margin-bottom: 8px;"><strong>Direitos obrigatórios da companhia:</strong></p>
+                            <ul style="margin-bottom: 12px;">
+                                <li>Comunicação gratuita (internet e ligações) — desde 1 hora de espera.</li>
+                                <li>Alimentação gratuita (voucher ou refeição) — a partir de 2 horas de espera.</li>
+                            </ul>
+                            <div class="copy-box" style="background: #FFFFFF;">
+                                <div class="copy-box-header">
+                                    <strong>Fale no balcão:</strong>
+                                    <button type="button" class="btn-copy" onclick="copyText('script-balcao-2h')"><i class="fas fa-copy"></i> Copiar</button>
+                                </div>
+                                <blockquote id="script-balcao-2h">"Meu voo [número] de [origem] para [destino], previsto para [horário], está atrasado há mais de 2 horas. Solicito a assistência material obrigatória: comunicação e voucher de alimentação, além da minha declaração de contingência."</blockquote>
+                            </div>
+                        </div>
+
+                        <div style="background: #FAF6F0; padding: 20px; border-radius: 14px; border-left: 4px solid #16A34A;">
+                            <h4 style="color: #16A34A; font-size: 1.05rem; margin-bottom: 8px;">⏳ Atraso Superior a 4 Horas:</h4>
+                            <p style="margin-bottom: 8px;"><strong>Direitos obrigatórios da companhia:</strong></p>
+                            <ul style="margin-bottom: 12px;">
+                                <li>Vouchers de alimentação e bebidas adequadas.</li>
+                                <li>Hospedagem em hotel + transporte ida e volta até o aeroporto (quando for necessário pernoite).</li>
+                                <li>Direito de escolha: Reembolso integral do valor da passagem OU Reacomodação no próximo voo (mesmo que de outra companhia aérea) OU Execução por outro meio de transporte.</li>
+                            </ul>
+                            <div class="copy-box" style="background: #FFFFFF;">
+                                <div class="copy-box-header">
+                                    <strong>Fale no balcão:</strong>
+                                    <button type="button" class="btn-copy" onclick="copyText('script-balcao-4h')"><i class="fas fa-copy"></i> Copiar</button>
+                                </div>
+                                <blockquote id="script-balcao-4h">"Meu voo [número] de [origem] para [destino], previsto para [horário], está atrasado há mais de 4 horas. Solicito a assistência obrigatória: comunicação, alimentação e, como precisarei pernoitar, hospedagem e transporte. Exijo escolher entre reacomodação na primeira oportunidade (inclusive de outra companhia aérea) ou reembolso, e peço a declaração por escrito do atraso com o protocolo de atendimento."</blockquote>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert-warning-box">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div>
+                            <h4>ATENÇÃO: NÃO ASSINE NADA COM "QUITAÇÃO TOTAL"!</h4>
+                            <p>Cuidado com formulários ou recibos oferecidos pela companhia aérea que contenham termos como "quitação ampla, geral e irrestrita". Receber o lanche, a hospedagem ou mesmo a remarcação de voo <strong>NÃO impede você de buscar indenização de até R$ 10.000 na Justiça pelos transtornos</strong>. Só assine recibos de recebimento do voucher simples — ou chame nossa assessoria jurídica antes de assinar.</p>
+                        </div>
+                    </div>
+
+                    <div class="disclaimer-note">
+                        <strong>Nota Informativa:</strong> Estas orientações têm caráter informativo e não substituem a análise individual do seu caso. O direito à indenização depende das provas e da análise jurídica concreta.
+                    </div>
+
+                    <div class="panel-whatsapp-action">
+                        <a href="https://wa.me/5561991147699?text=Ol%C3%A1,%20estou%20no%20aeroporto%20com%20voo%20atrasado/cancelado%20e%20preciso%20de%20orienta%C3%A7%C3%A3o%20imediata!" target="_blank" class="panel-whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Falar com Especialista no WhatsApp Agora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PAINEL 2: OVERBOOKING -->
+                <div class="orientacao-panel" id="orientacao-panel-2">
+                    <div class="balcao-banner">
+                        <div class="balcao-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1520437358207-323b43b50729?auto=format&fit=crop&w=700&q=80" alt="Preterição de embarque e overbooking" class="balcao-img">
+                        </div>
+                        <div class="balcao-speech-wrap">
+                            <span class="speech-tag"><i class="fas fa-bullhorn"></i> O Que Falar no Balcão de Atendimento:</span>
+                            <div class="speech-bubble">
+                                “SOLICITO MINHA DECLARAÇÃO DE PRETERIÇÃO E QUERO MEUS R$ 1.800 NO PIX AGORA, PREVISTOS NA RESOLUÇÃO DA ANAC, ALÉM DE ALIMENTAÇÃO, HOSPEDAGEM E TRANSPORTE.”
+                            </div>
+                            <p class="calm-notice">💡 Voo lotou? NÃO ACEITE VOUCHER DE 300 REAIS. A lei manda pagar em dinheiro na hora!</p>
+                        </div>
+                    </div>
+
+                    <div class="orientacao-step">
+                        <h3><span class="step-badge">1</span> O QUE É A COMPENSAÇÃO FINANCEIRA IMEDIATA (ART. 24 DA ANAC)</h3>
+                        <p>Quando a companhia vende mais passagens do que a capacidade do avião (overbooking) e te impede de embarcar involuntariamente, ela <strong>TEM QUE PAGAR COMPENSAÇÃO FINANCEIRA IMEDIATA NO BALCÃO</strong>:</p>
+
+                        <div class="copy-box">
+                            <div class="copy-box-header">
+                                <strong>Artigo 24 da Resolução 400 da ANAC:</strong>
+                            </div>
+                            <blockquote>"Art. 24. No caso de preterição, o transportador deverá efetuar, imediatamente, o pagamento de compensação financeira ao passageiro, podendo ser por transferência bancária, voucher ou em espécie, no valor de:<br>
+                            I – 250 (duzentos e cinquenta) DES, no caso de voo doméstico;<br>
+                            II – 500 (quinhentos) DES, no caso de voo internacional."</blockquote>
+                        </div>
+
+                        <div class="pix-compensation-box">
+                            <h4><i class="fas fa-money-bill-wave"></i> Quanto Você Tem Direito a Receber NA HORA no Balcão:</h4>
+                            <div class="pix-grid">
+                                <div class="pix-card">
+                                    <strong>Voo Nacional (Doméstico)</strong>
+                                    <span>≈ R$ 1.800,00</span>
+                                    <small>Equivalente a 250 DES (pago via PIX, dinheiro ou transferência imediata)</small>
+                                </div>
+                                <div class="pix-card">
+                                    <strong>Voo Internacional</strong>
+                                    <span>≈ R$ 3.600,00</span>
+                                    <small>Equivalente a 500 DES (pago na hora no guichê)</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="copy-box">
+                            <div class="copy-box-header">
+                                <strong>Script de Fala no Balcão:</strong>
+                                <button type="button" class="btn-copy" onclick="copyText('script-balcao-overbooking')"><i class="fas fa-copy"></i> Copiar</button>
+                            </div>
+                            <blockquote id="script-balcao-overbooking">"Fui preterido no voo [número], de [origem] para [destino], com bilhete e cartão válidos. Exijo a Declaração de Preterição de Embarque por escrito e o pagamento imediato da compensação do Art. 24 da Resolução 400 da ANAC: 250 DES para voo nacional ou 500 DES para voo internacional via PIX/transferência na hora, além da reacomodação no próximo voo e voucher de alimentação."</blockquote>
+                        </div>
+                    </div>
+
+                    <div class="orientacao-step">
+                        <h3><span class="step-badge">2</span> EXIJA A DECLARAÇÃO DE PRETERIÇÃO DE EMBARQUE</h3>
+                        <p>Peça a declaração formal da companhia comprovando que você compareceu no horário e foi impedido de embarcar por falta de assentos. Confira se o documento possui o seguinte teor:</p>
+                        <div class="copy-box">
+                            <blockquote>“A [Companhia Aérea], inscrita no CNPJ sob o nº [CNPJ], declara que o passageiro [Seu Nome Completo], titular do bilhete [Número], foi impedido de embarcar no voo [Número], rota [Origem]–[Destino], programado para [Data/Hora], por preterição de embarque involuntária (overbooking). Protocolo: [Número].”</blockquote>
+                        </div>
+                    </div>
+
+                    <div class="orientacao-step">
+                        <h3><span class="step-badge">3</span> E SE A COMPANHIA PEDIR VOLUNTÁRIOS?</h3>
+                        <p>A companhia é obrigada a procurar passageiros voluntários antes de barrar alguém. <strong>Cuidado:</strong> se você aceitar voluntariamente qualquer voucher pequeno de R$ 300 ou R$ 500, você abre mão do direito automático aos R$ 1.800 imediatos do art. 24. Só aceite se a companhia oferecer valores muito superiores e com hotel e próximo voo garantidos por escrito.</p>
+                    </div>
+
+                    <div class="orientacao-step">
+                        <h3><span class="step-badge">4</span> RECEBER O DINHEIRO NO BALCÃO NÃO ANULA SEU DANO MORAL NA JUSTIÇA</h3>
+                        <p>O pagamento de R$ 1.800 ou R$ 3.600 no balcão é uma penalidade administrativa obrigatória da ANAC. <strong>Você ainda pode entrar com ação judicial para buscar indenização por Danos Morais e Prejuízos Materiais adicionais</strong> pelo estresse, perda de compromissos e diárias de viagem!</p>
+                    </div>
+
+                    <div class="alert-warning-box">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div>
+                            <h4>ATENÇÃO AO RECIBO DO PIX: NÃO ASSINE QUITAÇÃO GERAL!</h4>
+                            <p>Ao receber o PIX da compensação imediata, o recibo deve mencionar EXCLUSIVAMENTE a quitação da compensação do Art. 24 da Resolução 400. Jamais assine termos que digam que você "renuncia a ações judiciais futuras".</p>
+                        </div>
+                    </div>
+
+                    <div class="disclaimer-note">
+                        <strong>Nota Informativa:</strong> Estas orientações têm caráter informativo e não substituem a análise individual do seu caso.
+                    </div>
+
+                    <div class="panel-whatsapp-action">
+                        <a href="https://wa.me/5561991147699?text=Ol%C3%A1,%20fui%20v%C3%ADtima%20de%20overbooking/preteri%C3%A7%C3%A3o%20de%20embarque%20no%20aeroporto%20e%20preciso%20de%20ajuda." target="_blank" class="panel-whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Falar com Especialista sobre Overbooking
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PAINEL 3: BAGAGEM -->
+                <div class="orientacao-panel" id="orientacao-panel-3">
+                    <div class="balcao-banner">
+                        <div class="balcao-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=80" alt="Extravio de bagagem e esteira de aeroporto" class="balcao-img">
+                        </div>
+                        <div class="balcao-speech-wrap">
+                            <span class="speech-tag"><i class="fas fa-bullhorn"></i> O Que Falar no Balcão de Bagagens:</span>
+                            <div class="speech-bubble">
+                                “SOLICITO O RIB (RELATÓRIO DE IRREGULARIDADE DE BAGAGEM) ONDE VOU CONSTAR TODOS OS ITENS DA BAGAGEM EXTRAVIADA.”
+                            </div>
+                            <p class="calm-notice">💡 Sua mala não apareceu na esteira? NÃO ACEITE "vai aparecer amanhã" sem o papel assinado!</p>
+                        </div>
+                    </div>
+
+                    <div class="orientacao-step">
+                        <h3><span class="step-badge">1</span> PEÇA O RIB (RELATÓRIO DE IRREGULARIDADE DE BAGAGEM) NA HORA!</h3>
+                        <p>O <strong>RIB</strong> (chamado internacionalmente de PIR - <em>Property Irregularity Report</em>) é a prova rainha do extravio. Sem ele, a companhia aérea alega que você retirou sua mala normalmente. Não saia da sala de desembarque sem a sua via do RIB carimbada e assinada pelo funcionário.</p>
+                        
+                        <div class="copy-box">
+                            <div class="copy-box-header">
+                                <strong>Dica de Ouro no Preenchimento do Conteúdo:</strong>
+                            </div>
+                            <blockquote style="font-weight: 600; color: #8C4712;">
+                                Na hora de preencher os campos do RIB, DESCREVA TUDO O QUE VOCÊ LEMBRAR QUE ESTAVA DENTRO DA MALA COM O MÁXIMO DE DETALHES E MARCAS. Exemplo: "4 calças jeans Levi's, 2 pares de tênis Nike, carregador original, 5 camisas, cosméticos, perfume importado e casaco de couro".
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <div class="orientacao-step">
+                        <h3><span class="step-badge">2</span> RESSARCIMENTO DE GASTOS DE EMERGÊNCIA (ART. 33 DA ANAC)</h3>
+                        <p>Enquanto você estiver sem sua mala fora do seu domicílio, a companhia aérea é <strong>obrigada a pagar despesas emergenciais</strong> de roupas, produtos de higiene pessoal e medicamentos necessários:</p>
+                        <ul>
+                            <li>Compre itens essenciais para passar os dias e <strong>guarde rigorosamente todas as notas fiscais</strong> (tire fotos imediatas dos comprovantes).</li>
+                            <li>O ressarcimento deve ser realizado pela companhia em até 7 dias após a apresentação dos comprovantes.</li>
+                        </ul>
+                    </div>
+
+                    <div class="orientacao-step">
+                        <h3><span class="step-badge">3</span> PRAZOS LEGAIS PARA LOCALIZAÇÃO DA BAGAGEM</h3>
+                        <ul>
+                            <li><strong>Voo Nacional:</strong> A empresa aérea tem até <strong>7 dias</strong> para localizar e entregar sua mala em seu endereço.</li>
+                            <li><strong>Voo Internacional:</strong> O prazo é de até <strong>21 dias</strong>.</li>
+                            <li><strong>Se ultrapassar o prazo:</strong> É considerado extravio definitivo, gerando dever de indenização integral dos pertences + Danos Morais na Justiça.</li>
+                            <li><strong>Mala Danificada ou Violada:</strong> Faça o protesto no balcão em até <strong>7 dias</strong> após o recebimento.</li>
+                        </ul>
+
+                        <div class="copy-box">
+                            <div class="copy-box-header">
+                                <strong>Script de Fala no Balcão de Bagagens:</strong>
+                                <button type="button" class="btn-copy" onclick="copyText('script-balcao-bagagem')"><i class="fas fa-copy"></i> Copiar</button>
+                            </div>
+                            <blockquote id="script-balcao-bagagem">"Minha bagagem despachada no voo [número], de [origem] para [destino], não foi restituída na esteira. Solicito a abertura imediata do RIB por escrito com o número do protocolo, o comprovante com a lista dos itens declarados e a assistência para cobertura de gastos de emergência conforme o Art. 33 da Resolução 400 da ANAC."</blockquote>
+                        </div>
+                    </div>
+
+                    <div class="alert-warning-box">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div>
+                            <h4>CUIDADO AO RECEBER A MALA ATRASADA: NÃO DÊ QUITAÇÃO TOTAL!</h4>
+                            <p>Quando a mala for entregue na sua casa ou hotel dias depois, verifique se está rasgada, com o cadeado violado ou se faltam objetos. Ao assinar o comprovante de entrega, escreva ao lado da sua assinatura: <em>"Recebido com atraso de X dias, sob reserva de conferência dos pertences internos"</em>. Ficar dias sem suas roupas gera dano moral garantido!</p>
+                        </div>
+                    </div>
+
+                    <div class="disclaimer-note">
+                        <strong>Nota Informativa:</strong> Estas orientações têm caráter informativo e não substituem a análise jurídica individual.
+                    </div>
+
+                    <div class="panel-whatsapp-action">
+                        <a href="https://wa.me/5561991147699?text=Ol%C3%A1,%20minha%20mala%20foi%20extraviada/danificada%20e%20gostaria%20de%20orienta%C3%A7%C3%A3o%20para%20indeniza%C3%A7%C3%A3o." target="_blank" class="panel-whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Falar com Especialista sobre Mala Extraviada
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             SEÇÃO 3: DEPOIMENTOS EM CARROSSEL (PROVA SOCIAL DE 3 MILHÕES)
+             ========================================================================= -->
+        <section class="testimonials-section" id="depoimentos">
+            <div class="testimonials-container">
+                
+                <div class="testimonials-monumental-header">
+                    <span class="testimonials-badge">
+                        <i class="fas fa-award"></i> Excelência Comprovada em Todo o Brasil
+                    </span>
+                    <h2 class="testimonials-huge-headline">
+                        Mais de <span class="gold-emphasis">3 Milhões de Passageiros</span> Já Tiveram Seus Direitos Assegurados e Receberam Indenização
+                    </h2>
+                    <p class="testimonials-subtext">
+                        Conheça relatos de quem não aceitou o prejuízo das companhias aéreas e recuperou seu dinheiro com nossa assistência jurídica especializada. Arraste para o lado para navegar:
+                    </p>
+                </div>
+
+                <!-- Carrossel Arrastável (Drag / Swipe / Touch) -->
+                <div class="carousel-viewport" id="carouselViewport">
+                    <div class="carousel-track" id="testimonialsTrack">
+                        
+                        <!-- Depoimento 1 -->
+                        <div class="testimonial-card">
+                            <div>
+                                <div class="card-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <span class="card-amount-tag"><i class="fas fa-check"></i> R$ 8.500,00 Recebidos</span>
+                                <p class="card-quote">
+                                    "Meu voo para Lisboa foi cancelado sem aviso e cheguei 18 horas depois, perdendo o primeiro dia de férias. Achei que seria impossível resolver, mas a equipe cuidou de tudo de forma 100% digital. Recebi a indenização sem pisar num fórum!"
+                                </p>
+                            </div>
+                            <div class="card-author-info">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Mariana Castro" class="author-avatar">
+                                <div class="author-meta">
+                                    <h5>Mariana Castro</h5>
+                                    <span>Voo Cancelado • TAP Air Portugal</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Depoimento 2 -->
+                        <div class="testimonial-card">
+                            <div>
+                                <div class="card-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <span class="card-amount-tag"><i class="fas fa-check"></i> R$ 10.000,00 Recebidos</span>
+                                <p class="card-quote">
+                                    "Minha mala com pertences e roupas de trabalho sumiu numa viagem a trabalho para Recife e só entregaram 8 dias depois. Segui as orientações do balcão pelo site, guardei o RIB e os especialistas conseguiram indenização máxima por Danos Morais!"
+                                </p>
+                            </div>
+                            <div class="card-author-info">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Carlos Eduardo Mendes" class="author-avatar">
+                                <div class="author-meta">
+                                    <h5>Carlos Eduardo Mendes</h5>
+                                    <span>Mala Extraviada • LATAM Airlines</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Depoimento 3 -->
+                        <div class="testimonial-card">
+                            <div>
+                                <div class="card-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <span class="card-amount-tag"><i class="fas fa-check"></i> R$ 1.800 no PIX + R$ 6.000</span>
+                                <p class="card-quote">
+                                    "Fui barrado no portão em Congonhas por overbooking. Com a minuta do site, exigi os R$ 1.800 na hora no balcão e depois entramos com o pedido judicial pelos transtornos. Foi a melhor decisão, atendimento impecável!"
+                                </p>
+                            </div>
+                            <div class="card-author-info">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Rodrigo Tavares" class="author-avatar">
+                                <div class="author-meta">
+                                    <h5>Rodrigo Tavares</h5>
+                                    <span>Overbooking • Gol Linhas Aéreas</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Depoimento 4 -->
+                        <div class="testimonial-card">
+                            <div>
+                                <div class="card-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <span class="card-amount-tag"><i class="fas fa-check"></i> R$ 7.200,00 Recebidos</span>
+                                <p class="card-quote">
+                                    "Perdemos nossa conexão para Miami por atraso no trecho inicial de Curitiba. Ficamos desamparados no saguão de madrugada sem hotel. O suporte jurídico foi rápido, humano e conquistou a justiça que merecíamos."
+                                </p>
+                            </div>
+                            <div class="card-author-info">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Camila e Fernando" class="author-avatar">
+                                <div class="author-meta">
+                                    <h5>Camila Albuquerque</h5>
+                                    <span>Perda de Conexão • American Airlines</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Depoimento 5 -->
+                        <div class="testimonial-card">
+                            <div>
+                                <div class="card-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <span class="card-amount-tag"><i class="fas fa-check"></i> R$ 9.400,00 Recebidos</span>
+                                <p class="card-quote">
+                                    "Minha avó é idosa e ficou 7 horas sentada no chão sem que dessem sequer uma garrafa de água durante um cancelamento da Azul. O respeito com que nos atenderam e a indenização que conseguiram trouxeram alívio à nossa família."
+                                </p>
+                            </div>
+                            <div class="card-author-info">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80" alt="Lucas Barbosa" class="author-avatar">
+                                <div class="author-meta">
+                                    <h5>Lucas Barbosa</h5>
+                                    <span>Atraso Grave sem Assistência • Azul</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Controles do Carrossel -->
+                <div class="carousel-controls">
+                    <button type="button" class="carousel-btn" id="prevTestimonial" aria-label="Depoimento Anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                    <button type="button" class="carousel-btn" id="nextTestimonial" aria-label="Próximo Depoimento">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             SEÇÃO 4: QUANTO VOCÊ PODE RECEBER (QUADRO INTERATIVO DE VALORES POR KM)
+             ========================================================================= -->
+        <section class="values-matrix-section" id="valores">
+            <div class="values-container">
+                
+                <div class="values-header">
+                    <span class="values-kicker">Parâmetros Oficiais de Compensação</span>
+                    <h2>Quanto Você Pode Receber por Voo Atrasado ou Cancelado?</h2>
+                    <p>Os valores de indenização são balizados pela distância percorrida da rota, tempo de atraso na chegada e gravidade do dano moral suportado. Explore o quadro interativo abaixo:</p>
+                </div>
+
+                <!-- Seletor em Pílulas Interativo -->
+                <div class="distance-tab-selector">
+                    <button type="button" class="dist-pill active" data-dist="curta">
+                        <i class="fas fa-route"></i> Curta Distância (Até 1.500 km)
+                    </button>
+                    <button type="button" class="dist-pill" data-dist="media">
+                        <i class="fas fa-plane"></i> Média Distância (1.500 a 3.500 km)
+                    </button>
+                    <button type="button" class="dist-pill" data-dist="longa">
+                        <i class="fas fa-globe-americas"></i> Longa Distância (+3.500 km)
+                    </button>
+                </div>
+
+                <!-- Grid com 3 Cards Detalhados -->
+                <div class="distance-cards-grid">
+                    
+                    <!-- Card 1: Curta -->
+                    <div class="distance-card highlight-card" data-card-dist="curta">
+                        <span class="distance-badge-type">Voos Domésticos / Regionais</span>
+                        <h3 class="distance-km-label">Até 1.500 km</h3>
+                        <p class="distance-example-routes">Exemplos: Rio de Janeiro ➔ São Paulo, Curitiba ➔ Porto Alegre, Belo Horizonte ➔ Brasília</p>
+                        
+                        <div class="compensation-amount-box">
+                            <span>Compensação Base:</span>
+                            <h3>Até R$ 1.200,00</h3>
+                            <small>+ Danos Morais de até R$ 5.000 a R$ 8.000</small>
+                        </div>
+
+                        <ul class="distance-features-list">
+                            <li><i class="fas fa-check"></i> Atrasos acima de 4 horas no destino</li>
+                            <li><i class="fas fa-check"></i> Alimentação obrigatória após 2 horas</li>
+                            <li><i class="fas fa-check"></i> Reacomodação imediata no próximo voo</li>
+                            <li><i class="fas fa-check"></i> Hotel com translado em caso de pernoite</li>
+                        </ul>
+
+                        <a href="#simulador" class="btn-card-simulate">Calcular Minha Rota <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Card 2: Média -->
+                    <div class="distance-card" data-card-dist="media">
+                        <span class="distance-badge-type">Voos Nacionais & Mercosul</span>
+                        <h3 class="distance-km-label">De 1.500 a 3.500 km</h3>
+                        <p class="distance-example-routes">Exemplos: São Paulo ➔ Fortaleza, Salvador ➔ Manaus, Rio ➔ Buenos Aires ou Santiago</p>
+                        
+                        <div class="compensation-amount-box">
+                            <span>Compensação Base:</span>
+                            <h3>Até R$ 2.000,00</h3>
+                            <small>+ Danos Morais de até R$ 8.000 a R$ 10.000</small>
+                        </div>
+
+                        <ul class="distance-features-list">
+                            <li><i class="fas fa-check"></i> Perda de conexões críticas</li>
+                            <li><i class="fas fa-check"></i> Ressarcimento de diárias de hospedagem perdidas</li>
+                            <li><i class="fas fa-check"></i> Cancelamento sem aviso de 72 horas</li>
+                            <li><i class="fas fa-check"></i> Indenização por estresse e constrangimento</li>
+                        </ul>
+
+                        <a href="#simulador" class="btn-card-simulate">Calcular Minha Rota <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Card 3: Longa -->
+                    <div class="distance-card" data-card-dist="longa">
+                        <span class="distance-badge-type">Voos Internacionais Intercontinentais</span>
+                        <h3 class="distance-km-label">Mais de 3.500 km</h3>
+                        <p class="distance-example-routes">Exemplos: Brasil ➔ Estados Unidos (Miami/NY), Europa (Lisboa/Paris), Caribe ou Ásia</p>
+                        
+                        <div class="compensation-amount-box">
+                            <span>Compensação Base:</span>
+                            <h3>Até R$ 3.500,00</h3>
+                            <small>+ Danos Morais podendo atingir até R$ 10.000 a R$ 12.000</small>
+                        </div>
+
+                        <ul class="distance-features-list">
+                            <li><i class="fas fa-check"></i> Convenção de Montreal + Código de Defesa do Consumidor</li>
+                            <li><i class="fas fa-check"></i> Compensação internacional por extravio de bagagem</li>
+                            <li><i class="fas fa-check"></i> Reembolso integral de gastos de sobrevivência</li>
+                            <li><i class="fas fa-check"></i> Alta jurisprudência em tribunais brasileiros</li>
+                        </ul>
+
+                        <a href="#simulador" class="btn-card-simulate">Calcular Minha Rota <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                </div>
+
+                <!-- Simulador Rápido com Slider Interativo -->
+                <div class="interactive-route-simulator">
+                    <h3><i class="fas fa-sliders-h" style="color: #DA9727;"></i> Teste a Distância do Seu Voo no Slider Interativo</h3>
+                    <p>Arraste a barra abaixo para visualizar o cálculo estimado de acordo com a distância do seu trecho aéreo:</p>
+                    
+                    <div class="slider-container">
+                        <input type="range" id="kmRangeSlider" min="200" max="9500" value="1200" step="50">
+                    </div>
+
+                    <div class="slider-dynamic-values">
+                        <div class="dynamic-badge">
+                            <strong id="currentKmDisplay">1.200 km</strong>
+                            <span>Distância Selecionada</span>
+                        </div>
+                        <div class="dynamic-badge">
+                            <strong id="currentCategoryDisplay">Curta Distância (Até 1.500 km)</strong>
+                            <span>Classificação da Rota</span>
+                        </div>
+                        <div class="dynamic-badge">
+                            <strong id="currentCompDisplay">Até R$ 1.200,00 + Danos Morais</strong>
+                            <span>Estimativa de Indenização</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             SEÇÃO 5: COMO FUNCIONA (JORNADA EM 4 ETAPAS)
+             ========================================================================= -->
+        <section class="how-it-works-section" id="como-funciona">
+            <div class="how-container">
+                
+                <div class="how-header">
+                    <span class="how-kicker">Transparência & Praticidade</span>
+                    <h2>Como Funciona o Resgate da Sua Indenização?</h2>
+                    <p>Processo simples, rápido e 100% digital. Você não precisa enfrentar filas nem comparecer a audiências:</p>
+                </div>
+
+                <div class="steps-timeline-grid">
+                    
+                    <div class="step-card-box">
+                        <span class="step-card-number">01</span>
+                        <div class="step-card-icon"><i class="fas fa-laptop"></i></div>
+                        <h4>1. Simulação Online Gratuita</h4>
+                        <p>Você informa os dados do voo no nosso simulador em menos de 1 minuto e descobre imediatamente a viabilidade jurídica do seu pedido.</p>
+                    </div>
+
+                    <div class="step-card-box">
+                        <span class="step-card-number">02</span>
+                        <div class="step-card-icon"><i class="fas fa-camera"></i></div>
+                        <h4>2. Envio Digital de Fotos</h4>
+                        <p>Basta tirar foto do seu bilhete de embarque, recibos e e-mails pelo próprio WhatsApp. Se não tiver os bilhetes, ajudamos a resgatar.</p>
+                    </div>
+
+                    <div class="step-card-box">
+                        <span class="step-card-number">03</span>
+                        <div class="step-card-icon"><i class="fas fa-gavel"></i></div>
+                        <h4>3. Atuação Especializada</h4>
+                        <p>Nossos advogados especializados em Direito Aeronáutico notificam a companhia aérea e cobram o valor justo por acordo ou via judicial.</p>
+                    </div>
+
+                    <div class="step-card-box">
+                        <span class="step-card-number">04</span>
+                        <div class="step-card-icon"><i class="fas fa-money-check-alt"></i></div>
+                        <h4>4. Dinheiro Direto na Sua Conta</h4>
+                        <p>A indenização conquistada é creditada diretamente na sua conta bancária via PIX ou TED. Você só comemora a justiça feita!</p>
+                    </div>
+
+                </div>
+
+                <!-- Banner Risco Zero -->
+                <div class="risk-zero-banner">
+                    <div class="risk-zero-text">
+                        <h3><i class="fas fa-shield-virus"></i> Compromisso Risco Zero: No Win, No Fee</h3>
+                        <p>Você não desembolsa nenhum valor para iniciar a solicitação. Cobramos nossos honorários contratuais exclusivamente como porcentagem do valor que você efetivamente receber. Se não houver indenização, você não paga absolutamente nada.</p>
+                    </div>
+                    <a href="#simulador" class="btn-primary-gold">
+                        <i class="fas fa-paper-plane"></i> Iniciar Análise Risco Zero
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             SEÇÃO 6: CASOS INDENIZÁVEIS & DIREITOS ANAC RESOLUÇÃO 400
+             ========================================================================= -->
+        <section class="cases-section" id="casos">
+            <div class="cases-container">
+                
+                <div class="cases-header">
+                    <span class="cases-kicker">Conheça Suas Garantias</span>
+                    <h2>Principais Situações com Direito a Indenização</h2>
+                    <p>Se você passou por qualquer um dos transtornos abaixo nos últimos 5 anos, você pode receber indenização financeira:</p>
+                </div>
+
+                <div class="cases-grid">
+                    
+                    <div class="case-card">
+                        <div class="case-icon-wrap"><i class="fas fa-clock"></i></div>
+                        <h4>Atraso de Voo Superior a 4 Horas</h4>
+                        <p>Chegar ao destino final com 4 horas ou mais de atraso gera direito a compensação por danos morais presumidos e ressarcimento de perdas de compromissos.</p>
+                        <span class="case-law-tag">Art. 20, Resolução 400 ANAC</span>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-icon-wrap"><i class="fas fa-ban"></i></div>
+                        <h4>Voo Cancelado sem Aviso Prévio</h4>
+                        <p>A empresa tem obrigação de avisar alterações com pelo menos 72 horas de antecedência. Não havendo aviso, a reacomodação e o dano moral são exigíveis.</p>
+                        <span class="case-law-tag">Art. 12, Resolução 400 ANAC</span>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-icon-wrap"><i class="fas fa-user-slash"></i></div>
+                        <h4>Overbooking (Preterição de Embarque)</h4>
+                        <p>Quando a companhia vende mais assentos do que a capacidade da aeronave e impede seu embarque. Dá direito a PIX imediato no balcão e indenização na Justiça.</p>
+                        <span class="case-law-tag">Art. 24, Resolução 400 ANAC</span>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-icon-wrap"><i class="fas fa-suitcase-rolling"></i></div>
+                        <h4>Bagagem Extraviada ou Danificada</h4>
+                        <p>Ficar sem suas roupas fora de casa ou ter sua mala quebrada dá direito ao pagamento de compras de emergência e indenização por danos materiais e morais.</p>
+                        <span class="case-law-tag">Art. 32 e 33, ANAC & Montreal</span>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-icon-wrap"><i class="fas fa-exchange-alt"></i></div>
+                        <h4>Perda de Voo de Conexão</h4>
+                        <p>Se o primeiro trecho atrasou e fez você perder o voo seguinte, a companhia deve bancar hotel, transporte e alimentação, além de indenizar o estresse gerado.</p>
+                        <span class="case-law-tag">Código de Defesa do Consumidor</span>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-icon-wrap"><i class="fas fa-utensils"></i></div>
+                        <h4>Falta de Assistência Material</h4>
+                        <p>Esperar horas no aeroporto sem voucher para almoço, jantar, água ou hotel durante a madrugada configura negligência com indenização ampliada.</p>
+                        <span class="case-law-tag">Art. 26 e 27, Resolução 400 ANAC</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             SEÇÃO 7: FAQ INTERATIVO (PERGUNTAS FREQUENTES ACCORDION)
+             ========================================================================= -->
+        <section class="faq-section" id="faq">
+            <div class="faq-container">
+                
+                <div class="faq-header">
+                    <span class="faq-kicker">Tire Todas as Suas Dúvidas</span>
+                    <h2>Perguntas Frequentes dos Passageiros</h2>
+                    <p>Respostas claras e transparentes sobre prazos, custos e procedimentos legais:</p>
+                </div>
+
+                <div class="faq-accordion">
+                    
+                    <div class="faq-item active">
+                        <button type="button" class="faq-question-btn">
+                            <span>Quanto tempo eu tenho para cobrar a indenização do meu voo?</span>
+                            <i class="fas fa-chevron-down faq-icon-arrow"></i>
+                        </button>
+                        <div class="faq-answer-content">
+                            <p>Para voos <strong>nacionais (domésticos)</strong> dentro do Brasil, o prazo prescricional é de até <strong>5 anos</strong> a contar da data do voo, conforme o Código de Defesa do Consumidor. Já para voos <strong>internacionais</strong>, o prazo é de <strong>2 anos</strong> com base na Convenção de Montreal. Mesmo que seu voo tenha ocorrido meses ou anos atrás, você ainda pode receber sua indenização!</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question-btn">
+                            <span>Eu preciso pagar alguma quantia adiantada para iniciar o processo?</span>
+                            <i class="fas fa-chevron-down faq-icon-arrow"></i>
+                        </button>
+                        <div class="faq-answer-content">
+                            <p><strong>Não! Zero custo inicial.</strong> Trabalhamos sob a cláusula de êxito: você só paga os honorários se e quando a indenização for depositada em sua conta. Se por qualquer motivo a solicitação não obtiver sucesso, você não tem nenhum custo.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question-btn">
+                            <span>E se eu não guardei o cartão de embarque impresso em papel?</span>
+                            <i class="fas fa-chevron-down faq-icon-arrow"></i>
+                        </button>
+                        <div class="faq-answer-content">
+                            <p>Não tem problema! Basta ter o e-mail de confirmação da compra, o código localizador da reserva ou o comprovante do cartão de crédito. Com esses dados, nossa equipe consegue resgatar todo o histórico do voo perante os sistemas das companhias aéreas e da ANAC.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question-btn">
+                            <span>A companhia aérea me deu lanche e remarcou o voo. Ainda tenho direito a indenização?</span>
+                            <i class="fas fa-chevron-down faq-icon-arrow"></i>
+                        </button>
+                        <div class="faq-answer-content">
+                            <p><strong>Sim, com certeza!</strong> O fornecimento de lanche, refeição ou hotel é apenas uma assistência material obrigatória por lei durante a espera, e NÃO anula o Dano Moral causado pelo atraso superior a 4 horas, cancelamento repentino ou perda de dias da sua viagem.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question-btn">
+                            <span>Eu precisarei comparecer a alguma audiência ou tribunal presencial?</span>
+                            <i class="fas fa-chevron-down faq-icon-arrow"></i>
+                        </button>
+                        <div class="faq-answer-content">
+                            <p>Na imensa maioria dos casos, <strong>não</strong>. Os processos no Brasil hoje são 100% digitais. Caso haja alguma audiência de conciliação por exigência do juiz, ela é realizada por videochamada pelo celular no conforto da sua casa.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question-btn">
+                            <span>Quanto tempo demora para a indenização sair?</span>
+                            <i class="fas fa-chevron-down faq-icon-arrow"></i>
+                        </button>
+                        <div class="faq-answer-content">
+                            <p>Em acordos extrajudiciais rápidos, o pagamento costuma ocorrer entre <strong>30 a 90 dias</strong>. Caso seja necessária ação no Juizado Especial Cível, o prazo médio costuma variar de <strong>4 a 8 meses</strong>, dependendo da comarca.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             SEÇÃO 8: CTA FINAL MAGNÉTICO
+             ========================================================================= -->
+        <section class="final-cta-section">
+            <div class="final-cta-container">
+                <div class="final-cta-icon">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <h2>Não Deixe Seu Prazo Prescrever.<br>Exija Seus <span>Direitos Agora Mesmo!</span></h2>
+                <p>
+                    As companhias aéreas lucram bilhões enquanto deixam passageiros desamparados nos aeroportos. Faça sua simulação gratuita agora e deixe nossa equipe especialista lutar pelo seu dinheiro.
+                </p>
+
+                <div class="final-cta-actions">
+                    <a href="https://wa.me/5561991147699?text=Ol%C3%A1,%20gostaria%20de%20saber%20se%20meu%20voo%20tem%20direito%20a%20indeniza%C3%A7%C3%A3o!" target="_blank" class="btn-cta-whatsapp-giant">
+                        <i class="fab fa-whatsapp"></i> Falar com Especialista no WhatsApp Agora
+                    </a>
+                    <a href="#simulador" class="btn-primary-gold">
+                        <i class="fas fa-calculator"></i> Simular Valor do Meu Voo
+                    </a>
+                </div>
+
+                <div class="cta-guarantee-badges">
+                    <span><i class="fas fa-lock"></i> Dados Protegidos pela LGPD</span>
+                    <span><i class="fas fa-clock"></i> Resposta Rápida</span>
+                    <span><i class="fas fa-shield-alt"></i> Advocacia Ética e Transparente</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================================
+         RODAPÉ DO SITE (FOOTER COMPLETO)
+         ========================================================================= -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            
+            <div class="footer-brand">
+                <div class="logo-placeholder-box">
+                    <div class="logo-emblem">
+                        <i class="fas fa-plane-departure"></i>
+                    </div>
+                    <div class="logo-text-group">
+                        <div class="logo-title">
+                            <span class="white-text">VOO</span>
+                            <span class="gold-text">Direto</span>
+                        </div>
+                        <span class="logo-hint">Defesa do Passageiro</span>
+                    </div>
+                </div>
+                <p>
+                    Assessoria especializada na defesa dos direitos dos passageiros do transporte aéreo civil nacional e internacional. Atuação focada no restabelecimento do equilíbrio e respeito ao consumidor.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Navegação Rápida</h4>
+                <ul class="footer-links">
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#simulador">Simulador de Indenização</a></li>
+                    <li><a href="#orientacoes">Guia no Aeroporto</a></li>
+                    <li><a href="#especialista">Nosso Especialista</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#valores">Quadro de Valores</a></li>
+                    <li><a href="#como-funciona">Como Funciona</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Direitos do Consumidor</h4>
+                <ul class="footer-links">
+                    <li><a href="#casos">Atraso Superior a 4h</a></li>
+                    <li><a href="#casos">Cancelamento de Voo</a></li>
+                    <li><a href="#casos">Overbooking (Preterição)</a></li>
+                    <li><a href="#casos">Extravio de Bagagem</a></li>
+                    <li><a href="#casos">Perda de Conexão</a></li>
+                    <li><a href="#faq">Prazos de Prescrição</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Atendimento Especializado</h4>
+                <div class="footer-contact-info">
+                    <li>
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp Direto:<br><strong>+55 (61) 99114-7699</strong></span>
+                    </li>
+                    <li>
+                        <i class="fas fa-user-shield"></i>
+                        <span>Equipe Jurídica:<br><strong>Especialistas em Direito Aéreo</strong></span>
+                    </li>
+                    <li>
+                        <i class="fas fa-globe-americas"></i>
+                        <span>Atendimento Digital:<br>Em todos os estados do Brasil e voos internacionais</span>
+                    </li>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-disclaimer-legal">
+            <strong>Aviso de Conformidade Legal & OAB:</strong> Este website possui conteúdo estritamente informativo e educativo sobre direitos do consumidor no transporte aéreo, em conformidade com o Provimento nº 205/2021 da OAB e o Código de Ética e Disciplina da Advocacia. O preenchimento do simulador e a troca de mensagens não constituem contratação imediata nem garantia de resultado patrimonial, dependendo da análise fática e documental de cada caso concreto.
+        </div>
+
+        <div class="footer-bottom-bar">
+            <span>&copy; 2026 Direito Voo - Suporte ao Passageiro Aéreo. Todos os direitos reservados.</span>
+            <span>Desenvolvido com Alto Padrão Visual &bull; Azul-Marinho (#021736) e Dourado (#DA9727)</span>
+        </div>
+    </footer>
+
+    <!-- =========================================================================
+         BOTÃO FLUTUANTE DE WHATSAPP COM TOOLTIP
+         ========================================================================= -->
+    <a href="https://wa.me/5561991147699?text=Ol%C3%A1,%20preciso%20de%20ajuda%20com%20um%20problema%20no%20meu%20voo!" target="_blank" class="wa-float-btn" aria-label="Atendimento no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <div class="wa-float-tooltip">
+            Dúvida com seu voo? Fale com nossa equipe agora!
+        </div>
+    </a>
+
+    <!-- Notificação Toast para Cópia de Minutas -->
+    <div id="toast-notification" role="status" aria-live="polite">
+        <i class="fas fa-check-circle"></i>
+        <span>Texto copiado com sucesso!</span>
+    </div>
+
+    <!-- Scripts do Sistema -->
+    <script src="script.js"></script>
+</body>
+</html>
